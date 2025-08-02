@@ -113,6 +113,27 @@ Es un **conjunto de reglas y símbolos** que usamos para escribir esas instrucci
 
 ---
 
+**Código fuente**
+
+```python
+numero_secreto: int = 7
+adivinado: bool = False
+
+while not adivinado:
+    try:
+        intento_str = input('Adivina el número secreto (entre 1 y 10): ')
+        intento_num = int(intento_str)
+        if intento_num == numero_secreto:
+            print('🎉 ¡Felicidades! ¡Adivinaste!')
+            adivinado = True
+        else:
+            print('🤔 Intenta de nuevo.')
+    except ValueError:
+        print('Por favor, ingresa un número válido.')
+```
+---
+
+
 **Construcción y Ejecución de un Programa**
 Es el camino desde tu idea hasta que la computadora la entiende y la realiza.
 
@@ -126,19 +147,6 @@ Intérprete de Python 🐍 (lo "traduce")
 Computadora 💻 (lo "ejecuta")
 ⬇️
 Resultado ✅
-
----
-
-**Ejercicio 1: Tu Primer Saludo 👋**
-**Consigna:** Escribe un programa simple que muestre "¡Hola, mundo programador!" en la pantalla.
-
----
-
-**Ejercicio 1: Solución ✅**
-```python
-print("¡Hola, mundo programador!")
-```
-**Explicación:** `print()` es una instrucción para mostrar texto.
 
 ---
 
@@ -319,13 +327,13 @@ Problema Grande ➡️ Descomponer ➡️ Algoritmo Detallado ➡️ Código ➡
 
 ---
 
-**Ejercicio 2: Pensando en Pasos 🚶‍♀️**
+**Ejercicio 1: Pensando en Pasos 🚶‍♀️**
 **Consigna:** Quieres escribir un programa que pida tu nombre y tu edad, y luego diga "Hola [Tu Nombre], tienes [Tu Edad] años."
 Aplica los 5 pasos del pensamiento computacional.
 
 ---
 
-**Ejercicio 2: Solución (Ejemplo) 💡**
+**Ejercicio 1: Solución (Ejemplo) 💡**
 *   **Comprensión:** Necesito pedir nombre y edad, luego mostrar un saludo personalizado.
 *   **Descomposición:**
     *   Pedir nombre.
@@ -386,21 +394,6 @@ Son programas que **combinan** todo lo anterior en uno solo.
 
 ---
 
-**Ejercicio 4: ¡Prepara tu Entorno! 🚀**
-**Consigna:** Si aún no lo has hecho, instala Python y un editor como VS Code. Luego, abre VS Code, crea un nuevo archivo `mi_primer_programa.py` y escribe el "Hola mundo" del Ejercicio 1. Ejecútalo.
-
----
-
-**Ejercicio 4: Solución (No hay código, solo pasos) ✅**
-1.  **Descargar Python:** `python.org/downloads`
-2.  **Descargar VS Code:** `code.visualstudio.com`
-3.  **Abrir VS Code.**
-4.  **Crear archivo:** `File > New File`, guardar como `mi_primer_programa.py`.
-5.  **Escribir:** `print("¡Hola, mundo programador!")`
-6.  **Ejecutar:** Clic derecho en el archivo y "Run Python File in Terminal" o usar el botón de "Play".
-
----
-
 ## ✍️ Instrucciones y Sus Tipos
 
 ---
@@ -448,6 +441,8 @@ x = 10      # Asigna el valor 10 a la variable x
 x = x + 5   # Asigna el valor de (x actual + 5) a x (ahora x es 15)
 ```
 ¡Las variables pueden cambiar su valor!
+
+* OJO 👀: La primera vez que se asigna un valor a una variable, se está declarando.
 
 ---
 
@@ -505,35 +500,6 @@ nombre = input("¿Cómo te llamas? ") # Entrada
 print("¡Hola, " + nombre + "!")     # Salida
 ```
 **Permite que tu programa interactúe.**
-
----
-
-**Ejercicio 5: Programa Interactivo 💬**
-**Consigna:** Crea un programa que:
-1.  Pida al usuario su edad.
-2.  Si la edad es mayor o igual a 18, muestre "Eres mayor de edad."
-3.  Si no, muestre "Eres menor de edad."
-4.  Finalmente, salude al usuario 3 veces usando un bucle.
-
----
-
-**Ejercicio 5: Solución ✅**
-```python
-# 1. Pedir la edad
-edad_str = input("Por favor, ingresa tu edad: ")
-edad = int(edad_str) # Convertir el texto a número entero
-
-# 2 y 3. Usar un condicional
-if edad >= 18:
-    print("Eres mayor de edad.")
-else:
-    print("Eres menor de edad.")
-
-# 4. Saludar 3 veces usando un bucle
-nombre = input("¿Cuál es tu nombre para saludarte? ")
-for i in range(3):
-    print("¡Hola de nuevo, " + nombre + "!")
-```
 
 ---
 
