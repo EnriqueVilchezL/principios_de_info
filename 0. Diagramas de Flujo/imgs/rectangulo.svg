@@ -1,0 +1,41 @@
+<svg width="300" height="500" viewBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="black" />
+    </marker>
+  </defs>
+
+  <!-- INICIO -->
+  <ellipse cx="150" cy="50" rx="60" ry="25" fill="white" stroke="black" stroke-width="2"/>
+  <text x="150" y="50" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" alignment-baseline="middle">INICIO</text>
+  <line x1="150" y1="75" x2="150" y2="120" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Pedir "Ancho" -->
+  <polygon points="60,120 240,120 220,170 40,170" fill="white" stroke="black" stroke-width="2"/>
+  <text x="150" y="145" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" alignment-baseline="middle">Pedir "Ancho"</text>
+  <line x1="150" y1="170" x2="150" y2="210" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Pedir "Alto" -->
+  <polygon points="60,210 240,210 220,260 40,260" fill="white" stroke="black" stroke-width="2"/>
+  <text x="150" y="235" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" alignment-baseline="middle">Pedir "Alto"</text>
+  <line x1="150" y1="260" x2="150" y2="300" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Calcular: Área = Ancho * Alto -->
+  <rect x="50" y="300" width="200" height="50" fill="white" stroke="black" stroke-width="2"/>
+  <text x="150" y="325" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" alignment-baseline="middle">Área = Ancho * Alto</text>
+  <line x1="150" y1="350" x2="150" y2="390" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Mostrar "El área es: [Área]" -->
+<polygon points="60,390 240,390 220,440 40,440" fill="white" stroke="black" stroke-width="2"/>
+<text x="150" y="410" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" alignment-baseline="middle">
+  Mostrar "El área es:
+</text>
+<text x="150" y="430" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" alignment-baseline="middle">
+  [Área]"
+</text>
+<line x1="150" y1="440" x2="150" y2="470" stroke="black" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+<!-- FIN -->
+<ellipse cx="150" cy="470" rx="60" ry="25" fill="white" stroke="black" stroke-width="2"/>
+<text x="150" y="476" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" alignment-baseline="middle">FIN</text>
+</svg>

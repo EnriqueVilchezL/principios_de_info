@@ -1,0 +1,36 @@
+
+<svg width="560" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="560" height="600" fill="#f6f8fb"/>
+  <rect x="20" y="20" width="520" height="560" fill="white" stroke="#e6eef8" rx="16" ry="16"/>
+  <text x="40" y="50" font-size="18" font-weight="bold" font-family="sans-serif">Chat</text>
+
+  <!-- Estudiante -->
+  <circle cx="460" cy="112" r="18" fill="#fde68a" stroke="#f59e0b"/>
+  <text x="460" y="116" font-size="14" font-weight="bold" text-anchor="middle" fill="#92400e">S</text>
+  <rect x="60" y="96" width="380" height="68" rx="12" ry="12" fill="#fff7ed" stroke="#f59e0b"/>
+  <text x="70" y="118" font-size="14" font-family="sans-serif" fill="#000">
+    <tspan x="70" dy="0">¿Puedes explicar cómo funciona un</tspan>
+    <tspan x="70" dy="18">ciclo for en Python?</tspan>
+    <tspan x="70" dy="18" font-size="12" fill="#475569">No lo entiendo.</tspan>
+  </text>
+
+  <!-- ChatGPT respuesta -->
+  <circle cx="40" cy="270" r="18" fill="#c7d2fe" stroke="#6366f1"/>
+  <text x="40" y="274" font-size="14" font-weight="bold" text-anchor="middle" fill="#3730a3">G</text>
+  <rect x="60" y="254" width="440" height="200" rx="12" ry="12" fill="#eef2ff" stroke="#6366f1"/>
+  <text x="70" y="274" font-size="13" font-family="sans-serif" fill="#000">
+    <tspan x="70" dy="0">En Python, un ciclo <tspan font-weight="bold">for</tspan> se usa para repetir</tspan>
+    <tspan x="70" dy="18">acciones recorriendo elementos</tspan>
+    <tspan x="70" dy="18">de una secuencia (lista, cadena,</tspan>
+    <tspan x="70" dy="18">rango numérico, etc.).</tspan>
+    <tspan x="70" dy="24" font-weight="bold">Ejemplo:</tspan>
+    <tspan x="70" dy="24" font-family="monospace">for i in range(5):</tspan>
+    <tspan x="90" dy="18" font-family="monospace">print(i)</tspan>
+    <tspan x="70" dy="24" font-size="12" fill="#475569">
+      Esto imprime los números del 0 al 4,
+    </tspan>
+    <tspan x="70" dy="16" font-size="12" fill="#475569">
+      uno por línea.
+    </tspan>
+  </text>
+</svg>
