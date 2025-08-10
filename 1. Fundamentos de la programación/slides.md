@@ -62,7 +62,7 @@ Dominarás el arte de resolver problemas, creando soluciones digitales que impac
 ---
 
 **¿Qué es un Algoritmo?**
-Es una **secuencia finita y ordenada de pasos** para resolver un problema o realizar una tarea.
+Es una **secuencia finita y ordenada de pasos** o **instrucciones definidas** para resolver un problema o realizar una tarea.
 
 ---
 
@@ -85,6 +85,20 @@ Es lo "intangible" de tu dispositivo. 👻
 *   Tu navegador web 🌐
 *   La app de tu banco 💰
 *   Un videojuego 🎮
+
+---
+
+**¿Qué es Hardware?**
+Es la **parte física y tangible** de una computadora o dispositivo electrónico: los **componentes** que puedes tocar, como el teclado, la pantalla, el disco duro, el procesador, etc.
+
+---
+
+**Hardware: Ejemplos Cotidianos**
+*   Teclado ⌨️
+*   Monitor 🖥️
+*   Disco duro 💽
+*   Memoria RAM 📀
+
 
 ---
 
@@ -133,6 +147,11 @@ while not adivinado:
 ```
 ---
 
+![bg center height:500px Meme](imgs/programar_meme.png)
+
+![bg center height:500px Meme](imgs/binary_meme.png)
+
+---
 
 **Construcción y Ejecución de un Programa**
 Es el camino desde tu idea hasta que la computadora la entiende y la realiza.
@@ -223,7 +242,7 @@ La **abstracción** permite no abrumarse con todos los detalles de cada instrucc
 
 #### D. Algoritmos 🧮
 
-Lista **finita** y **ordenada** de instrucciones o pasos **bien definidos**, para **resolver** un problema
+Secuencia **finita** y **ordenada** de instrucciones o pasos **bien definidos**, para **resolver** un problema
 
 ---
 
@@ -426,6 +445,14 @@ saludo = "Hola"  # Declara 'saludo' y guarda el texto "Hola"
 edad = 30        # Declara 'edad' y guarda el número 30
 ```
 **`saludo` y `edad` son variables.**
+
+---
+
+En lenguajes de programación como c++, se declara sin asignar un valor:
+
+```cpp
+int x;  // declaración de una variable entera llamada x, sin valor asignado aún
+```
 
 ---
 
