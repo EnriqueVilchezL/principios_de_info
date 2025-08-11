@@ -44,13 +44,15 @@ html: true
 
 ---
 
-**¡Bienvenido al Futuro!** ✨
-La Inteligencia Artificial (IA) es una herramienta poderosa que puede transformar tu aprendizaje.
+## Introducción ✨
+
+La Inteligencia Artificial (IA) constituye una herramienta tecnológica de gran potencial para el proceso de aprendizaje académico.
 
 ---
 
-**Pero, ¿cómo la usamos bien?** 🤔
-Es crucial entender los límites para que la IA sea tu aliada, no una trampa.
+## Marco Ético 🤔
+
+Es fundamental establecer parámetros claros para el uso apropiado de la IA en el contexto educativo universitario.
 
 ---
 
@@ -58,38 +60,38 @@ Es crucial entender los límites para que la IA sea tu aliada, no una trampa.
 
 ---
 
-**¿Qué NO debes hacer?** ⚠️
-Usar la IA de forma que comprometa la **integridad académica** es inaceptable. Esto es, no actuar con honestidad, responsabilidad y respeto por las normas éticas en todo lo relacionado con el trabajo académico.
+**Definición de prácticas inadecuadas** ⚠️
+El uso inapropiado de la IA compromete la **integridad académica**, definida como la actuación con honestidad, responsabilidad y respeto por las normas éticas en el trabajo académico.
 
 ---
 
 **1. Plagio o Falsificación** ❌
-Presentar contenido generado por IA como si fuera **totalmente tuyo**.
+Presentar contenido generado por IA como trabajo **original propio**.
 
 ---
 
-**2. Engaño o Trampa** 🚫
-Usar la IA para obtener respuestas en tareas o laboratorios, de forma **deshonesta**.
+**2. Deshonestidad Académica** 🚫
+Utilizar la IA para obtener respuestas en evaluaciones o laboratorios de manera **no autorizada**.
 
 ---
 
-**Ejemplo Prohibido:**
-Pedir a la IA que te dé la solución completa a un problema de programación sin que tú lo intentes.
+**Ejemplo de práctica inadecuada:**
+Solicitar a la IA la solución completa de un problema de programación sin realizar previamente el proceso de análisis y desarrollo personal.
 
 ---
 
 **3. Generación de Contenido Inapropiado** 🚨
-Crear o difundir material ofensivo, discriminatorio o que viole las normas de conducta del curso.
+Crear o distribuir material que viole las normas de conducta académica o contenga elementos discriminatorios.
 
 ---
 
-**Consecuencias** ⚖️
-Recuerda que la carta al estudiante indica que:
+**Marco normativo institucional** ⚖️
+Según la carta al estudiante:
 > Es **ilegal** presentar como propio, código parcial o total escrito por otras personas u obtenido de fuentes de información, como por ejemplo de libros, de **herramientas de inteligencia artificial** (como ChatGPT), o de Internet, **sin la autorización expresa de la persona docente**.
 
 ---
 
-**Recuerda:** Tu aprendizaje y tu ética son lo más valioso. 🧠
+**Nota importante:** La integridad académica y el aprendizaje efectivo constituyen los valores fundamentales del proceso educativo. 🧠
 
 ---
 
@@ -97,13 +99,13 @@ Recuerda que la carta al estudiante indica que:
 
 ---
 
-**¿Cómo la IA puede ser tu Súper Aliada?** 💡
-Usa la IA para **potenciar tu aprendizaje**, no para evitarlo.
+**Aplicaciones apropiadas de la IA** 💡
+La IA debe utilizarse como herramienta de **apoyo al aprendizaje**, no como sustituto del proceso educativo.
 
 ---
 
 **1. Herramienta de Aprendizaje y Comprensión** 📚
-Usa la IA para aclarar conceptos, explorar ideas y profundizar tu entendimiento.
+Utilizar la IA para aclarar conceptos, explorar ideas y profundizar la comprensión de temas específicos.
 
 ---
 
@@ -111,12 +113,12 @@ Usa la IA para aclarar conceptos, explorar ideas y profundizar tu entendimiento.
 
 ---
 
-**2. Asistente de mejoras** ✍️
-Una vez ya resolviste un ejercicio **por tu cuenta**, puedes pedirle a alguna herramienta que dé feedback de tu solución al problema. ¡Puede darte una mejor solución y tú la estudias!
+**2. Asistente de Retroalimentación** ✍️
+Después de resolver un ejercicio de forma independiente, solicitar retroalimentación sobre la solución desarrollada para identificar áreas de mejora.
 
 ---
 
-*OJO*: **No significa que tengas que copiar la solución de la herramienta**, porque ya estarías incluyendo código que no es tuyo. La idea es **mejorar tus habilidades de entendimiento y programación**.
+**Consideración metodológica**: El objetivo es **desarrollar habilidades de comprensión y programación**, no incorporar código externo sin proceso de aprendizaje previo.
 
 ---
 
@@ -124,8 +126,8 @@ Una vez ya resolviste un ejercicio **por tu cuenta**, puedes pedirle a alguna he
 
 ---
 
-**3. Crear nuevos ejercicios** 🐍
-La IA puede ser un excelente compañero para crear ejercicios similares a los que ya tienes. ¡Puedes crear más prácticas!
+**3. Generación de Ejercicios Adicionales** 🐍
+Utilizar la IA para crear ejercicios similares a los existentes, facilitando la práctica adicional.
 
 ---
 
@@ -133,25 +135,24 @@ La IA puede ser un excelente compañero para crear ejercicios similares a los qu
 
 ---
 
-**Principios Clave para el Uso Ético** ✨
----
+**Principios Fundamentales para el Uso Ético** ✨
 
 ---
 
-**1. Responsabilidad** 🧑‍💻
-Eres el **responsable final** de todo el contenido que entregas.
+**1. Responsabilidad Académica** 🧑‍💻
+El estudiante mantiene la **responsabilidad completa** sobre todo el contenido presentado en sus trabajos.
 
 ---
 
-**2. Verificación** ✅
-Siempre **verifica la información** generada por la IA. Puede contener errores o "alucinaciones".
+**2. Verificación de Información** ✅
+Es obligatorio **verificar y validar** toda información generada por IA, considerando la posibilidad de errores o información inexacta.
 
 ---
 
 **3. Aprendizaje Activo** 🧠
-Usa la IA para **aprender y mejorar tus habilidades**, no para evitar el esfuerzo intelectual.
+La IA debe emplearse para **fortalecer el proceso de aprendizaje**, no para evitar el desarrollo de habilidades intelectuales.
 
 ---
 
-**¡Sé un Maestro de la IA!** 🚀
-Usa la Inteligencia Artificial con sabiduría y ética para potenciar tu camino educativo.
+**Conclusión** 🚀
+El uso responsable de la Inteligencia Artificial requiere equilibrio entre aprovechamiento tecnológico y desarrollo académico personal.
