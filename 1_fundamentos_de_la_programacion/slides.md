@@ -43,17 +43,17 @@ paginate: true
 
 ---
 
-## 💡 Tu Viaje Comienza Aquí
+## 💡 Introducción
 
 ---
 
-**¡Hola, futuro programador!**
-Prepárate para desvelar los secretos de cómo las computadoras "piensan" y cómo puedes hablar con ellas. 🧠
+**Objetivos del curso**
+Comprender los principios fundamentales del funcionamiento de las computadoras y los métodos de comunicación con estos sistemas. 🧠
 
 ---
 
-**¿Por qué aprender esto?**
-Dominarás el arte de resolver problemas, creando soluciones digitales que impactan el mundo. ✨ ¡Piensa en grande!
+**Importancia de la programación**
+El dominio de la programación permite desarrollar habilidades de resolución de problemas y crear soluciones tecnológicas de impacto. ✨
 
 ---
 
@@ -61,41 +61,41 @@ Dominarás el arte de resolver problemas, creando soluciones digitales que impac
 
 ---
 
-**¿Qué es un Algoritmo?**
-Es una **secuencia finita y ordenada de pasos** o **instrucciones definidas** para resolver un problema o realizar una tarea.
+**Definición de Algoritmo**
+Un algoritmo es una **secuencia finita y ordenada de pasos** o **instrucciones definidas** para resolver un problema o realizar una tarea específica.
 
 ---
 
-**Algoritmo: Una Receta 🧑‍🍳**
-Imagina hacer una torta:
+**Algoritmo: Analogía con procesos cotidianos 🧑‍🍳**
+Proceso de preparación de una torta:
 
-1. Mezclar ingredientes.
-2. Hornear a X grados.
-3. Dejar enfriar.
-¡Cada paso es crucial!
-
----
-
-**¿Qué es Software?**
-Son las **instrucciones y datos** que le dicen a una computadora qué hacer.
-Es lo "intangible" de tu dispositivo. 👻
+1. Mezclar ingredientes según proporciones.
+2. Hornear a temperatura específica.
+3. Permitir enfriamiento controlado.
+Cada paso constituye un elemento esencial del proceso.
 
 ---
 
-**Software: Ejemplos Cotidianos**
-
-* Tu navegador web 🌐
-* La app de tu banco 💰
-* Un videojuego 🎮
+**Definición de Software**
+El software comprende las **instrucciones y datos** que especifican las operaciones que debe realizar una computadora.
+Constituye el componente intangible del sistema computacional. 👻
 
 ---
 
-**¿Qué es Hardware?**
-Es la **parte física y tangible** de una computadora o dispositivo electrónico: los **componentes** que puedes tocar, como el teclado, la pantalla, el disco duro, el procesador, etc.
+**Software: Ejemplos de aplicación**
+
+* Navegadores web 🌐
+* Aplicaciones bancarias 💰
+* Videojuegos 🎮
 
 ---
 
-**Hardware: Ejemplos Cotidianos**
+**Definición de Hardware**
+El hardware constituye la **parte física y tangible** de una computadora o dispositivo electrónico: los **componentes materiales** como teclado, pantalla, disco duro y procesador.
+
+---
+
+**Hardware: Ejemplos de componentes**
 
 * Teclado ⌨️
 * Monitor 🖥️
@@ -104,23 +104,23 @@ Es la **parte física y tangible** de una computadora o dispositivo electrónico
 
 ---
 
-**¿Qué es Programación?**
-Es el **proceso de escribir instrucciones** (código) para que una computadora las ejecute.
-¡Es hablar con la máquina en su idioma! 🗣️💻
+**Definición de Programación**
+La programación es el **proceso de crear instrucciones** (código) para que una computadora las ejecute de manera específica.
+Constituye un método de comunicación con sistemas computacionales. 🗣️💻
 
 ---
 
-**¿Qué es un Lenguaje de Programación?**
-Es un **conjunto de reglas y símbolos** que usamos para escribir esas instrucciones.
-¡Como un idioma especial para computadoras! 💬
+**Definición de Lenguaje de Programación**
+Un lenguaje de programación es un **conjunto de reglas y símbolos** utilizados para escribir instrucciones computacionales.
+Funciona como un sistema de comunicación especializado para computadoras. 💬
 
 ---
 
-**Python: Nuestro Idioma Favorito 🐍**
+**Python: Características principales 🐍**
 
-* **Fácil de leer:** Parece inglés.
-* **Versátil:** Para web, ciencia, juegos, ¡casi todo!
-* **Potente:** Usado por Google, Netflix, NASA.
+* **Legibilidad:** Sintaxis similar al lenguaje natural.
+* **Versatilidad:** Aplicable en desarrollo web, ciencia de datos, juegos y más.
+* **Adopción industrial:** Utilizado por organizaciones como Google, Netflix y NASA.
 
 ---
 
@@ -157,19 +157,19 @@ while not adivinado:
 
 ---
 
-**Construcción y Ejecución de un Programa**
-Es el camino desde tu idea hasta que la computadora la entiende y la realiza.
+**Proceso de construcción y ejecución de programas**
+Secuencia que transforma una idea conceptual en una solución computacional ejecutable.
 
 ---
 
-**El Flujo del Programa ➡️**
-Tu Código (Python) ✍️
+**Flujo de ejecución de programas ➡️**
+Código fuente (Python) ✍️
 ⬇️
-Intérprete de Python 🐍 (lo "traduce")
+Intérprete de Python 🐍 (procesamiento)
 ⬇️
-Computadora 💻 (lo "ejecuta")
+Sistema computacional 💻 (ejecución)
 ⬇️
-Resultado ✅
+Resultado obtenido ✅
 
 ---
 
@@ -183,7 +183,7 @@ Resultado ✅
 
 #### A. Descomposición ፨
 
-**Separar** los problemas en partes más **pequeñas** y manejables
+**Dividir** problemas complejos en componentes más **pequeños** y manejables
 
 ![bg w:400 right Pizza en trozos](imgs/decomp_pizza.png)
 
@@ -193,13 +193,13 @@ Resultado ✅
 
 ---
 
-La **descomposición** ayuda a que los problemas grandes sean menos abrumadores
+La **descomposición** facilita el abordaje de problemas de gran complejidad mediante su fragmentación en elementos más simples.
 
 ---
 
 #### B. Patrones 🚧
 
-**Recetas** o **fórmulas** que nos ayudan a entender similitudes en los datos o en las situaciones. Esto nos permite resolver problemas de forma más **eficiente**.
+**Estructuras** o **modelos** que permiten identificar similitudes en datos o situaciones, facilitando la resolución eficiente de problemas.
 
 ---
 
@@ -211,17 +211,17 @@ La **descomposición** ayuda a que los problemas grandes sean menos abrumadores
 
 ---
 
-**¿En la práctica?**
+**Aplicación práctica**
 
-Son soluciones **reutilizable**. Son guías
+Los patrones constituyen soluciones **reutilizables** que funcionan como guías metodológicas.
 
-Existen muchos patrones ya identificados. Ayudan a hacer **buenos** programas y más **rápido**.
+Existen numerosos patrones documentados que contribuyen a desarrollar programas de mejor calidad en menor tiempo.
 
 ---
 
 #### C. Abstracción 🔳
 
-**Esconder** el detalle de algo muy complejo. Se enfoca en **qué** hace algo, y **no cómo** lo hace.
+**Ocultar** la complejidad de implementación de un sistema. Se concentra en **qué** realiza un componente, no en **cómo** lo ejecuta.
 
 ![bg w:400 right Caja negra](imgs/abstract_box.jpg)
 
@@ -229,13 +229,13 @@ Existen muchos patrones ya identificados. Ayudan a hacer **buenos** programas y 
 
 ![bg w:500 center Microondas](imgs/abstract_micro.webp)
 
-??
+vs.
 
 ![bg w:500 center Microondas por dentro](imgs/abstract_inside.jpeg)
 
 ---
 
-La **abstracción** permite no abrumarse con todos los detalles de cada instrucción o pasos de un programa.
+La **abstracción** permite manejar la complejidad sin requerir conocimiento detallado de cada componente del sistema.
 
 ![w:400 Ejemplo con robot](imgs/decomp_ex.png)
 
@@ -251,50 +251,50 @@ Secuencia **finita** y **ordenada** de instrucciones o pasos **bien definidos**,
 
 ---
 
-**¿Cómo se crea software de calidad?**
-No es magia, es un proceso organizado, ¡como construir un edificio! 🏗️
+**Metodología para el desarrollo de software de calidad**
+Proceso estructurado y organizado para la creación de sistemas computacionales, comparable a la construcción arquitectónica. 🏗️
 
 ---
 
 **Fase 1: Análisis 🔍**
-**¿Qué problema estamos resolviendo?**
+**Identificación del problema a resolver**
 
-* Entender las **necesidades** del usuario.
-* Definir los **objetivos** del programa.
-* ¡La fase más crítica!
+* Determinar las **necesidades** del usuario.
+* Establecer los **objetivos** del programa.
+* Constituye la fase más crítica del proceso.
 
 ---
 
 **Fase 2: Diseño ✏️**
-**¿Cómo vamos a resolverlo?**
+**Planificación de la solución**
 
-* Planificar la **estructura** del programa.
-* Pensar en los **algoritmos** necesarios.
-* ¡El "plano" antes de construir!
+* Estructurar la **arquitectura** del programa.
+* Definir los **algoritmos** necesarios.
+* Crear el "plano" previo a la implementación.
 
 ---
 
 **Fase 3: Implementación 💻**
-**¡Manos a la obra: a programar!**
+**Desarrollo del código**
 
-* Traducir el diseño a **código**.
-* Escribir las **instrucciones** en Python.
-* ¡Aquí es donde la magia cobra vida!
+* Traducir el diseño a **código fuente**.
+* Escribir las **instrucciones** en el lenguaje seleccionado.
+* Materializar la solución planificada.
 
 ---
 
 **Fase 4: Prueba ✅**
-**¿Funciona como esperábamos?**
+**Verificación del funcionamiento**
 
-* Buscar **errores** (bugs).
-* Asegurarse de que cumple todos los **requisitos**.
-* ¡Ajustar y pulir hasta la perfección! ✨
+* Identificar **errores** (bugs) en el código.
+* Confirmar el cumplimiento de todos los **requisitos**.
+* Realizar ajustes hasta alcanzar la funcionalidad deseada. ✨
 
 ---
 
-**SDLC: Resumen Visual**
+**SDLC: Síntesis del proceso**
 Análisis ➡️ Diseño ➡️ Implementación ➡️ Prueba
-(y a menudo, volver a empezar para mejorar) 🔄
+(proceso iterativo para mejora continua) 🔄
 
 ---
 
@@ -302,88 +302,88 @@ Análisis ➡️ Diseño ➡️ Implementación ➡️ Prueba
 
 ---
 
-**¿Qué es el Pensamiento Computacional?**
-Es una forma de **resolver problemas** usando técnicas que usan los científicos de la computación.
-¡No es solo para programadores! Es una habilidad para la vida. 🌟
+**Definición de Pensamiento Computacional**
+Metodología de **resolución de problemas** que utiliza técnicas empleadas en ciencias de la computación.
+Constituye una habilidad transversal aplicable en múltiples disciplinas. 🌟
 
 ---
 
 **Paso 1: Comprensión del Problema 🤔**
 
-* **¿Qué me piden?**
-* **¿Cuál es el objetivo final?**
-* **¿Qué información tengo?**
-* **¿Qué necesito obtener?**
-¡Entender antes de actuar!
+* **Identificar los requerimientos**
+* **Establecer el objetivo final**
+* **Analizar la información disponible**
+* **Determinar los resultados esperados**
+Análisis preliminar antes de proceder a la solución.
 
 ---
 
 **Paso 2: Descomposición del Problema 🧩**
 
-* Dividir un problema grande en **partes más pequeñas y manejables**.
-* Resolver cada parte por separado.
-* ¡Como un rompecabezas!
+* Dividir problemas complejos en **componentes manejables**.
+* Resolver cada elemento de forma independiente.
+* Aplicar estrategia modular de resolución.
 
 ---
 
 **Paso 3: Especificación del Algoritmo 📝**
 
-* Describir los **pasos detallados** para resolver cada subproblema.
-* Puede ser en lenguaje natural, diagramas de flujo o pseudocódigo.
-* ¡La "receta" lista para codificar!
+* Describir los **pasos detallados** para cada subproblema.
+* Utilizar lenguaje natural, diagramas de flujo o pseudocódigo.
+* Desarrollar la secuencia lógica previa a la codificación.
 
 ---
 
 **Paso 4: Codificación ✍️**
 
-* Traducir el algoritmo a un **lenguaje de programación** (Python).
-* Escribir las instrucciones línea por línea.
-* ¡Aquí aplicas tu conocimiento de Python!
+* Traducir el algoritmo al **lenguaje de programación** seleccionado.
+* Implementar las instrucciones de forma sistemática.
+* Aplicar conocimientos de sintaxis y semántica del lenguaje.
 
 ---
 
 **Paso 5: Validación (Prueba y Depuración) ✅**
 
-* **Ejecutar** el código.
-* **Verificar** si el resultado es correcto.
-* Si hay errores (bugs), **identificarlos y corregirlos**.
-* ¡Asegurarse de que todo funciona perfectamente!
+* **Ejecutar** el código desarrollado.
+* **Verificar** la corrección de los resultados.
+* **Identificar y corregir** errores encontrados.
+* Confirmar el funcionamiento según especificaciones.
 
 ---
 
-**Metodología: Flujo Total**
-Problema Grande ➡️ Descomponer ➡️ Algoritmo Detallado ➡️ Código ➡️ Validar ✅
+**Metodología: Proceso integral**
+Problema Complejo ➡️ Descomposición ➡️ Algoritmo Detallado ➡️ Implementación ➡️ Validación ✅
 
 ---
 
-**Ejercicio 1: Pensando en Pasos 🚶‍♀️**
-**Consigna:** Quieres escribir un programa que pida tu nombre y tu edad, y luego diga "Hola [Tu Nombre], tienes [Tu Edad] años."
-Aplica los 5 pasos del pensamiento computacional.
+**Ejercicio 1: Aplicación del pensamiento computacional 🚶‍♀️**
+**Enunciado:** Desarrollar un programa que solicite nombre y edad del usuario, y genere el mensaje "Hola [Nombre], tienes [Edad] años."
+Aplicar los 5 pasos de la metodología de pensamiento computacional.
 
 ---
 
-**Ejercicio 1: Solución (Ejemplo) 💡**
+**Ejercicio 1: Desarrollo de la solución 💡**
 
-* **Comprensión:** Necesito pedir nombre y edad, luego mostrar un saludo personalizado.
+* **Comprensión:** Requerir entrada de nombre y edad, generar saludo personalizado.
 * **Descomposición:**
-  * Pedir nombre.
-  * Pedir edad.
-  * Formar el mensaje.
-  * Mostrar el mensaje.
+  * Solicitar nombre del usuario.
+  * Solicitar edad del usuario.
+  * Construir mensaje personalizado.
+  * Mostrar mensaje resultante.
 
 ---
 
 * **Especificación del Algoritmo:**
-    1. Preguntar "Cuál es tu nombre?". Guardar respuesta.
-    2. Preguntar "Cuántos años tienes?". Guardar respuesta.
-    3. Crear frase combinando "Hola", nombre, "tienes", edad, "años.".
-    4. Mostrar la frase.
-* **Codificación:** (Ver siguiente slide)
-* **Validación:** Ejecutar el código, ingresar datos y verificar que la frase sea correcta.
+    1. Solicitar "¿Cuál es tu nombre?". Almacenar respuesta.
+    2. Solicitar "¿Cuántos años tienes?". Almacenar respuesta.
+    3. Concatenar elementos: "Hola", nombre, "tienes", edad, "años.".
+    4. Mostrar mensaje resultante.
+* **Codificación:** (Ver diapositiva siguiente)
+* **Validación:** Ejecutar código, ingresar datos de prueba y verificar formato correcto del mensaje.
 
 ---
 
-**Ejercicio 2: Código de Solución ✅**
+**Ejercicio 2: Implementación del código ✅**
 
 ```python
 # Codificación
@@ -399,31 +399,31 @@ print(mensaje)
 
 ---
 
-**¿Dónde escribimos y ejecutamos código?**
-Necesitas un **"taller"** para tus programas.
-Esto es un **Entorno de Programación**. 🖥️
+**Definición de entorno de programación**
+Espacio de trabajo especializado para el desarrollo y ejecución de código.
+Constituye el conjunto de herramientas necesarias para la programación. 🖥️
 
 ---
 
-**Componentes Clave:**
+**Componentes fundamentales:**
 
-* **Editor de Texto:** Donde escribes tu código (como Word, pero para código).
-* **Intérprete/Compilador:** Traduce tu código a lenguaje de máquina. (Python usa un intérprete).
-* **Consola/Terminal:** Donde ves los resultados de tu programa.
+* **Editor de texto:** Herramienta para la escritura de código fuente.
+* **Intérprete/Compilador:** Procesador que traduce código a lenguaje de máquina.
+* **Consola/Terminal:** Interfaz para visualización de resultados del programa.
 
 ---
 
 **IDEs (Entornos de Desarrollo Integrados)**
-Son programas que **combinan** todo lo anterior en uno solo.
-¡Tu taller completo en una sola herramienta! 🚀
+Aplicaciones que **integran** todas las herramientas de desarrollo en una sola plataforma.
+Proporcionan un espacio de trabajo completo y unificado. 🚀
 
 ---
 
 **Ejemplos de IDEs para Python:**
 
-* **VS Code (Visual Studio Code):** Popular, flexible, muchas extensiones.
-* **PyCharm:** Muy potente para desarrollo profesional.
-* **Jupyter Notebooks:** Ideal para análisis de datos y aprendizaje interactivo.
+* **VS Code (Visual Studio Code):** Versatil, extensible, amplia adopción.
+* **PyCharm:** Robusto para desarrollo profesional avanzado.
+* **Jupyter Notebooks:** Especializado en análisis de datos y aprendizaje interactivo.
 
 ---
 
@@ -431,13 +431,13 @@ Son programas que **combinan** todo lo anterior en uno solo.
 
 ---
 
-**¿Qué es una Instrucción?**
-Es la **unidad más básica** de un programa.
-Una sola orden que le das a la computadora. 🗣️
+**Definición de instrucción**
+Unidad **básica y fundamental** de un programa computacional.
+Constituye una orden específica dirigida al sistema computacional. 🗣️
 
 ---
 
-**Tipos de Instrucciones Comunes:**
+**Tipos de instrucciones fundamentales:**
 
 1. **Declaraciones**
 2. **Asignaciones**
@@ -448,62 +448,62 @@ Una sola orden que le das a la computadora. 🗣️
 
 **Tipo 1: Declaraciones (Variables) 🏷️**
 
-* Sirven para **nombrar "contenedores"** donde guardamos información.
-* Piensa en una etiqueta para una caja.
-* `nombre_caja = valor_dentro`
+* Establecen **identificadores** para contenedores de información.
+* Funcionan como etiquetas para espacios de memoria.
+* `nombre_variable = valor_asignado`
 
 ---
 
-**Ejemplo de Declaración**
+**Ejemplo de declaración**
 
 ```python
-saludo = "Hola"  # Declara 'saludo' y guarda el texto "Hola"
-edad = 30        # Declara 'edad' y guarda el número 30
+saludo = "Hola"  # Declara 'saludo' y almacena el texto "Hola"
+edad = 30        # Declara 'edad' y almacena el número 30
 ```
 
-**`saludo` y `edad` son variables.**
+**`saludo` y `edad` constituyen variables.**
 
 ---
 
-En lenguajes de programación como c++, se declara sin asignar un valor:
+En lenguajes como C++, la declaración puede realizarse sin asignación inicial:
 
 ```cpp
-int x;  // declaración de una variable entera llamada x, sin valor asignado aún
+int x;  // declaración de variable entera llamada x, sin valor inicial
 ```
 
 ---
 
 **Tipo 2: Asignaciones ➡️**
 
-* **Dar un valor** a una variable.
-* Se usa el signo `=` (no significa "igual", sino "asigna").
+* **Establecer un valor** específico para una variable.
+* Utiliza el operador `=` (representa asignación, no igualdad matemática).
 
 ---
 
-**Ejemplo de Asignación**
+**Ejemplo de asignación**
 
 ```python
 x = 10      # Asigna el valor 10 a la variable x
-x = x + 5   # Asigna el valor de (x actual + 5) a x (ahora x es 15)
+x = x + 5   # Asigna el resultado de (x actual + 5) a x (resultado: x = 15)
 ```
 
-¡Las variables pueden cambiar su valor!
+Las variables pueden modificar su valor durante la ejecución.
 
-* OJO 👀: La primera vez que se asigna un valor a una variable, se está declarando.
+* **Nota importante** 👀: La primera asignación de valor a una variable constituye simultáneamente su declaración.
 
 ---
 
 **Tipo 3: Control de Flujo 🚦**
 
-* Cambian el **orden normal** en que se ejecutan las instrucciones (de arriba a abajo).
-* Permiten tomar **decisiones** o **repetir** acciones.
+* Modifican la **secuencia normal** de ejecución de instrucciones (secuencial).
+* Permiten implementar **decisiones** y **repeticiones** en el programa.
 
 ---
 
 **Control de Flujo: Condicionales (Decisiones) 🤔**
 
-* **`if` (si):** Ejecuta un bloque de código **si** una condición es verdadera.
-* **`else` (si no):** Ejecuta otro bloque **si no** lo es.
+* **`if` (si):** Ejecuta un bloque de código **cuando** una condición es verdadera.
+* **`else` (si no):** Ejecuta un bloque alternativo **cuando** la condición es falsa.
 
 ---
 
@@ -512,26 +512,26 @@ x = x + 5   # Asigna el valor de (x actual + 5) a x (ahora x es 15)
 ```python
 temperatura = 25
 if temperatura > 20:
-    print("¡Qué calor!")
+    print("Temperatura elevada")
 else:
-    print("Clima agradable.")
+    print("Temperatura moderada")
 ```
 
-**El programa decide qué mensaje mostrar.**
+**El programa selecciona el mensaje según la evaluación de la condición.**
 
 ---
 
 **Control de Flujo: Bucles (Repeticiones) 🔁**
 
-* **`for`:** Repite un bloque de código un **número fijo de veces** o para cada elemento en una secuencia.
-* **`while`:** Repite un bloque de código **mientras** una condición sea verdadera.
+* **`for`:** Repite un bloque de código un **número determinado de veces** o para cada elemento de una secuencia.
+* **`while`:** Repite un bloque de código **mientras** una condición permanezca verdadera.
 
 ---
 
 **Ejemplo: Bucle `for`**
 
 ```python
-for numero in range(3): # Repite 3 veces (0, 1, 2)
+for numero in range(3): # Itera 3 veces (valores: 0, 1, 2)
     print("Contando:", numero)
 ```
 
@@ -544,35 +544,38 @@ Contando: 2
 
 **Tipo 4: Entrada y Salida (I/O) ↔️**
 
-* **Entrada (`input()`):** Recibir datos del usuario (desde el teclado).
-* **Salida (`print()`):** Mostrar información al usuario (en la pantalla).
+* **Entrada (`input()`):** Obtener datos del usuario (teclado).
+* **Salida (`print()`):** Mostrar información al usuario (pantalla).
 
 ---
 
 **Ejemplo: Entrada y Salida**
 
 ```python
-nombre = input("¿Cómo te llamas? ") # Entrada
-print("¡Hola, " + nombre + "!")     # Salida
+nombre = input("¿Cómo te llamas? ") # Entrada de datos
+print("Hola, " + nombre + "!")     # Salida de información
 ```
 
-**Permite que tu programa interactúe.**
+**Facilita la interacción entre el programa y el usuario.**
 
 ---
 
-## 🌟 ¡Felicidades
+## 🌟 Conclusión
 
 ---
 
-**Has completado un gran primer paso.**
-Ahora entiendes los **pilares de la programación**.
-¡Sigue practicando, la mejor forma de aprender es haciendo! 🚀
+**Síntesis del contenido**
+Se han presentado los **conceptos fundamentales de la programación**.
+La práctica constante constituye el método más efectivo de aprendizaje. 🚀
 
 ---
+
+**Reflexión final**
 
 **"Todo el mundo en este país debería aprender a programar un ordenador... porque te enseña a pensar."**
 **— Steve Jobs**
 
 ---
 
-**¡A programar se ha dicho!** 🐍✨
+**Recomendación académica** 🐍✨
+La aplicación práctica de estos conceptos fundamentales constituye el siguiente paso en el proceso de aprendizaje.

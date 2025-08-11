@@ -5,8 +5,9 @@ __pycache__/
 
 # C extensions
 *.so
-# add .DS_Store to ignore macOS Finder metadata files
+# add .DS_Store everywhere
 .DS_Store
+**/.DS_Store
 
 # Distribution / packaging
 .Python
