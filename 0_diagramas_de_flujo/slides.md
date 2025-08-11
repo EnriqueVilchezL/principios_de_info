@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: uncover
 backgroundImage: url("../resources/templates/2/Template_page-0018.jpg")
 style: |
@@ -43,17 +43,17 @@ paginate: true
 
 ---
 
-## ¡Hola, Futuro Programador! 👋
+## Introducción 👋
 
 ---
 
-**¿Qué es un Diagrama de Flujo?**
-Es un **mapa visual** de los pasos y decisiones para resolver un problema. ¡Como una receta!
+**Definición de Diagrama de Flujo**
+Un **diagrama de flujo** es una representación gráfica que ilustra los pasos y decisiones necesarios para resolver un problema o ejecutar un proceso.
 
 ---
 
-**¿Para qué sirven?** 🤔
-Nos ayudan a **planificar** y **entender** cómo funciona un programa antes de escribir código.
+**Propósito** 🤔
+Los diagramas de flujo permiten **planificar** y **comprender** la lógica de un programa antes de su implementación en código.
 
 ---
 
@@ -61,124 +61,123 @@ Nos ayudan a **planificar** y **entender** cómo funciona un programa antes de e
 
 ---
 
-**Cada forma tiene un significado.**
-¡Son nuestro vocabulario visual!
+**Símbolos básicos utilizados en diagramas de flujo.**
+Cada símbolo representa un tipo específico de operación o elemento del proceso.
 
 ---
 
 **1. Inicio / Fin (Terminal)** ⚪
-Marca el **principio** o el **final** del proceso.
+Indica el **punto de inicio** o **finalización** del proceso.
 
 ![Incio](imgs/inicio.svg)
 
 ---
 
 **2. Proceso (Acción)** 🟩
-Una **tarea** o **acción** a realizar.
+Representa una **operación** o **acción** específica a ejecutar.
 
 ![Incio](imgs/proceso.svg)
-
 
 ---
 
 **3. Entrada / Salida (Datos)** 🟦
-Para **pedir información** o **mostrar resultados**.
+Utilizado para **solicitar información** o **mostrar resultados**.
 
 ![Incio](imgs/entrada.svg)
 
 ---
 
 **4. Decisión (Condicional)** 🔶
-Se hace una **pregunta** con dos respuestas: **Sí** o **No**.
+Representa una **condición** que requiere una respuesta de **Sí** o **No**.
 
 ![Decision](imgs/decision.svg)
 
 ---
 
 **5. Línea de Flujo (Flecha)** ➡️
-Conecta los símbolos y muestra la **dirección** del proceso.
+Conecta los símbolos e indica la **secuencia** del proceso.
 
 ![Flujo](imgs/flujo.svg)
 
+---
+
+## Ejemplo Práctico 🚶‍♀️
 
 ---
 
-## ¡Tu Primer Diagrama! 🚶‍♀️
+**Caso de estudio: Decisión sobre llevar paraguas ☔**
+Análisis del proceso de toma de decisión basado en condiciones meteorológicas.
 
 ---
 
-**Ejemplo: ¿Llevo Paraguas? ☔**
-Vamos a dibujar el proceso de decidir si necesitamos un paraguas.
-
----
-
-**Paso 1: El Inicio**
-Todo comienza con el símbolo de **INICIO**.
+**Paso 1: Punto de inicio**
+El proceso inicia con el símbolo **INICIO**.
 
 ![Flujo](imgs/ejemplo/inicio.svg)
 
-
 ---
 
-**Paso 2: La Primera Acción**
-Después de iniciar, ¿qué hacemos? ¡**Mirar el cielo**!
+**Paso 2: Acción inicial**
+Se ejecuta la acción **"Mirar el cielo"**.
 
 ![Flujo](imgs/ejemplo/accion_1.svg)
 
 ---
 
-**Paso 3: La Decisión Crucial**
-Ahora que sabemos cómo está el cielo, ¿**está lloviendo**?
+**Paso 3: Evaluación de condición**
+Se evalúa la condición: **"¿Está lloviendo?"**
 
 ![Flujo](imgs/ejemplo/decision.svg)
 
 ---
 
-**Paso 4: Dos Caminos, Un Final**
-Si "Sí", tomamos paraguas. Si "No", salimos sin él. Ambos caminos nos llevan al **FIN**.
+**Paso 4: Rutas alternativas**
+Según la respuesta, se ejecutan acciones diferentes que convergen en el punto **FIN**.
 
 ![width:200px Diagram](imgs/diagram.png)
 
 ---
 
-**¡Así se lee el diagrama!**
-*   **INICIO**: Empezamos.
-*   **Mirar el cielo**: Una acción simple.
-*   **¿Está lloviendo?**: Una pregunta con "Sí" o "No".
-*   **Tomar paraguas / Salir sin paraguas**: Acciones diferentes según la respuesta.
-*   **FIN**: El proceso termina.
+**Interpretación del diagrama:**
+
+* **INICIO**: Punto de partida del proceso.
+* **Mirar el cielo**: Acción de observación.
+* **¿Está lloviendo?**: Condición con respuesta binaria.
+* **Tomar paraguas / Salir sin paraguas**: Acciones resultantes según la evaluación.
+* **FIN**: Terminación del proceso.
 
 ---
 
-## Otro Ejemplo: Par/Impar 🔢
+## Ejemplo Adicional: Clasificación Par/Impar 🔢
 
 ---
 
-**Problema:** Queremos saber si un número es par o impar.
+**Planteamiento del problema:** Determinar si un número dado es par o impar.
 
 ---
 
-**¿Cómo funciona?**
-Pedimos un número, decidimos si es par, y mostramos el resultado. ¡Dos caminos, un destino!
+**Descripción del proceso:**
+Se solicita un número como entrada, se evalúa su paridad mediante una condición, y se muestra el resultado correspondiente.
 
 ---
 
-## ¡Tu Turno! 💪
+## Ejercicio Práctico 💪
 
 ---
 
-**Ejercicio: Calcular el Área de un Rectángulo**
-¡Piensa en los pasos para resolverlo!
+**Actividad: Calcular el Área de un Rectángulo**
+Desarrolle un diagrama de flujo para resolver este problema matemático.
 
 ---
 
-**Consigna:**
-Crea un diagrama de flujo para calcular el área de un rectángulo.
+**Especificaciones:**
+Diseñe un diagrama de flujo para calcular el área de un rectángulo.
 
-**Recuerda:**
-*   Necesitas pedir el **ancho** y el **alto**.
-*   La fórmula es: **Área = Ancho \* Alto**.
-*   Debes **mostrar el resultado**.
+**Elementos requeridos:**
+
+* Solicitar el **ancho** y el **alto** como datos de entrada.
+* Aplicar la fórmula: **Área = Ancho × Alto**.
+* Mostrar el **resultado** obtenido.
 
 ---
 
@@ -186,39 +185,41 @@ Crea un diagrama de flujo para calcular el área de un rectángulo.
 
 ---
 
-**Diagrama: Área de Rectángulo**
+**Propuesta de solución:**
 
 ![Flujo](imgs/rectangulo.svg)
 
 ---
 
-**¿Cómo te fue?**
-¡Felicidades si te acercaste! Lo importante es entender el flujo de los pasos.
+**Evaluación del ejercicio:**
+El objetivo principal es comprender la secuencia lógica de los pasos necesarios para resolver el problema.
 
 ---
 
-## ¿Por qué son útiles en Programación? 💡
+## Importancia en el Desarrollo de Software 💡
 
 ---
 
 **1. Claridad** 📝
-Ayudan a **organizar tus ideas** antes de escribir código.
+Facilitan la **organización conceptual** previa a la implementación del código.
 
-**2. Detectar Errores** 🐛
-Puedes **seguir el flujo** para encontrar problemas lógicos.
+**2. Detección de Errores** 🐛
+Permiten **identificar problemas lógicos** mediante el seguimiento sistemático del flujo.
 
 **3. Comunicación** 🗣️
-Explican la **lógica** de tu programa a cualquiera.
-
-**4. Pensamiento Lógico** 🧠
-Te entrenan a **pensar paso a paso**, clave para programar.
+Proporcionan una **representación universal** de la lógica del programa.
 
 ---
 
-**¡Sigue practicando!**
-Con ellos, ¡la programación será más fácil y divertida!
+**4. Desarrollo del Pensamiento Lógico** 🧠
+Fomentan el **razonamiento secuencial**, fundamental para la programación.
 
 ---
 
-**¡Gracias!**
-**¡A programar se ha dicho!** 🚀
+**Recomendación:**
+La práctica constante con diagramas de flujo mejora significativamente las habilidades de programación.
+
+---
+
+**Conclusión**
+Los diagramas de flujo constituyen una herramienta fundamental en el proceso de desarrollo de software. 🚀

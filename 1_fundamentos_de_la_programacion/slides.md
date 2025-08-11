@@ -68,9 +68,10 @@ Es una **secuencia finita y ordenada de pasos** o **instrucciones definidas** pa
 
 **Algoritmo: Una Receta 🧑‍🍳**
 Imagina hacer una torta:
-1.  Mezclar ingredientes.
-2.  Hornear a X grados.
-3.  Dejar enfriar.
+
+1. Mezclar ingredientes.
+2. Hornear a X grados.
+3. Dejar enfriar.
 ¡Cada paso es crucial!
 
 ---
@@ -82,9 +83,10 @@ Es lo "intangible" de tu dispositivo. 👻
 ---
 
 **Software: Ejemplos Cotidianos**
-*   Tu navegador web 🌐
-*   La app de tu banco 💰
-*   Un videojuego 🎮
+
+* Tu navegador web 🌐
+* La app de tu banco 💰
+* Un videojuego 🎮
 
 ---
 
@@ -94,11 +96,11 @@ Es la **parte física y tangible** de una computadora o dispositivo electrónico
 ---
 
 **Hardware: Ejemplos Cotidianos**
-*   Teclado ⌨️
-*   Monitor 🖥️
-*   Disco duro 💽
-*   Memoria RAM 📀
 
+* Teclado ⌨️
+* Monitor 🖥️
+* Disco duro 💽
+* Memoria RAM 📀
 
 ---
 
@@ -115,9 +117,10 @@ Es un **conjunto de reglas y símbolos** que usamos para escribir esas instrucci
 ---
 
 **Python: Nuestro Idioma Favorito 🐍**
-*   **Fácil de leer:** Parece inglés.
-*   **Versátil:** Para web, ciencia, juegos, ¡casi todo!
-*   **Potente:** Usado por Google, Netflix, NASA.
+
+* **Fácil de leer:** Parece inglés.
+* **Versátil:** Para web, ciencia, juegos, ¡casi todo!
+* **Potente:** Usado por Google, Netflix, NASA.
 
 ---
 
@@ -145,6 +148,7 @@ while not adivinado:
     except ValueError:
         print('Por favor, ingresa un número válido.')
 ```
+
 ---
 
 ![bg center height:500px Meme](imgs/programar_meme.png)
@@ -169,15 +173,13 @@ Resultado ✅
 
 ---
 
-
 ![bg](../resources/templates/2/Template_page-0006.jpg)
 
 ## Bases 🧠
 
-
 ![w:500 center Bases de la programacion](imgs/bases.png)
 
---- 
+---
 
 #### A. Descomposición ፨
 
@@ -199,12 +201,11 @@ La **descomposición** ayuda a que los problemas grandes sean menos abrumadores
 
 **Recetas** o **fórmulas** que nos ayudan a entender similitudes en los datos o en las situaciones. Esto nos permite resolver problemas de forma más **eficiente**.
 
-
 ---
 
 ![bg w:450 center Edificio de lego](imgs/pattern_ex.webp)
 
-<===> 
+<===>
 
 ![bg w:400 center Instrucciones de lego](imgs/pattern_ex_1.jpg)
 
@@ -212,7 +213,7 @@ La **descomposición** ayuda a que los problemas grandes sean menos abrumadores
 
 **¿En la práctica?**
 
-Son soluciones **reutilizable**. Son guías 
+Son soluciones **reutilizable**. Son guías
 
 Existen muchos patrones ya identificados. Ayudan a hacer **buenos** programas y más **rápido**.
 
@@ -257,33 +258,37 @@ No es magia, es un proceso organizado, ¡como construir un edificio! 🏗️
 
 **Fase 1: Análisis 🔍**
 **¿Qué problema estamos resolviendo?**
-*   Entender las **necesidades** del usuario.
-*   Definir los **objetivos** del programa.
-*   ¡La fase más crítica!
+
+* Entender las **necesidades** del usuario.
+* Definir los **objetivos** del programa.
+* ¡La fase más crítica!
 
 ---
 
 **Fase 2: Diseño ✏️**
 **¿Cómo vamos a resolverlo?**
-*   Planificar la **estructura** del programa.
-*   Pensar en los **algoritmos** necesarios.
-*   ¡El "plano" antes de construir!
+
+* Planificar la **estructura** del programa.
+* Pensar en los **algoritmos** necesarios.
+* ¡El "plano" antes de construir!
 
 ---
 
 **Fase 3: Implementación 💻**
 **¡Manos a la obra: a programar!**
-*   Traducir el diseño a **código**.
-*   Escribir las **instrucciones** en Python.
-*   ¡Aquí es donde la magia cobra vida!
+
+* Traducir el diseño a **código**.
+* Escribir las **instrucciones** en Python.
+* ¡Aquí es donde la magia cobra vida!
 
 ---
 
 **Fase 4: Prueba ✅**
 **¿Funciona como esperábamos?**
-*   Buscar **errores** (bugs).
-*   Asegurarse de que cumple todos los **requisitos**.
-*   ¡Ajustar y pulir hasta la perfección! ✨
+
+* Buscar **errores** (bugs).
+* Asegurarse de que cumple todos los **requisitos**.
+* ¡Ajustar y pulir hasta la perfección! ✨
 
 ---
 
@@ -304,40 +309,45 @@ Es una forma de **resolver problemas** usando técnicas que usan los científico
 ---
 
 **Paso 1: Comprensión del Problema 🤔**
-*   **¿Qué me piden?**
-*   **¿Cuál es el objetivo final?**
-*   **¿Qué información tengo?**
-*   **¿Qué necesito obtener?**
+
+* **¿Qué me piden?**
+* **¿Cuál es el objetivo final?**
+* **¿Qué información tengo?**
+* **¿Qué necesito obtener?**
 ¡Entender antes de actuar!
 
 ---
 
 **Paso 2: Descomposición del Problema 🧩**
-*   Dividir un problema grande en **partes más pequeñas y manejables**.
-*   Resolver cada parte por separado.
-*   ¡Como un rompecabezas!
+
+* Dividir un problema grande en **partes más pequeñas y manejables**.
+* Resolver cada parte por separado.
+* ¡Como un rompecabezas!
 
 ---
 
 **Paso 3: Especificación del Algoritmo 📝**
-*   Describir los **pasos detallados** para resolver cada subproblema.
-*   Puede ser en lenguaje natural, diagramas de flujo o pseudocódigo.
-*   ¡La "receta" lista para codificar!
+
+* Describir los **pasos detallados** para resolver cada subproblema.
+* Puede ser en lenguaje natural, diagramas de flujo o pseudocódigo.
+* ¡La "receta" lista para codificar!
 
 ---
 
 **Paso 4: Codificación ✍️**
-*   Traducir el algoritmo a un **lenguaje de programación** (Python).
-*   Escribir las instrucciones línea por línea.
-*   ¡Aquí aplicas tu conocimiento de Python!
+
+* Traducir el algoritmo a un **lenguaje de programación** (Python).
+* Escribir las instrucciones línea por línea.
+* ¡Aquí aplicas tu conocimiento de Python!
 
 ---
 
 **Paso 5: Validación (Prueba y Depuración) ✅**
-*   **Ejecutar** el código.
-*   **Verificar** si el resultado es correcto.
-*   Si hay errores (bugs), **identificarlos y corregirlos**.
-*   ¡Asegurarse de que todo funciona perfectamente!
+
+* **Ejecutar** el código.
+* **Verificar** si el resultado es correcto.
+* Si hay errores (bugs), **identificarlos y corregirlos**.
+* ¡Asegurarse de que todo funciona perfectamente!
 
 ---
 
@@ -353,26 +363,28 @@ Aplica los 5 pasos del pensamiento computacional.
 ---
 
 **Ejercicio 1: Solución (Ejemplo) 💡**
-*   **Comprensión:** Necesito pedir nombre y edad, luego mostrar un saludo personalizado.
-*   **Descomposición:**
-    *   Pedir nombre.
-    *   Pedir edad.
-    *   Formar el mensaje.
-    *   Mostrar el mensaje.
+
+* **Comprensión:** Necesito pedir nombre y edad, luego mostrar un saludo personalizado.
+* **Descomposición:**
+  * Pedir nombre.
+  * Pedir edad.
+  * Formar el mensaje.
+  * Mostrar el mensaje.
 
 ---
 
-*   **Especificación del Algoritmo:**
-    1.  Preguntar "Cuál es tu nombre?". Guardar respuesta.
-    2.  Preguntar "Cuántos años tienes?". Guardar respuesta.
-    3.  Crear frase combinando "Hola", nombre, "tienes", edad, "años.".
-    4.  Mostrar la frase.
-*   **Codificación:** (Ver siguiente slide)
-*   **Validación:** Ejecutar el código, ingresar datos y verificar que la frase sea correcta.
+* **Especificación del Algoritmo:**
+    1. Preguntar "Cuál es tu nombre?". Guardar respuesta.
+    2. Preguntar "Cuántos años tienes?". Guardar respuesta.
+    3. Crear frase combinando "Hola", nombre, "tienes", edad, "años.".
+    4. Mostrar la frase.
+* **Codificación:** (Ver siguiente slide)
+* **Validación:** Ejecutar el código, ingresar datos y verificar que la frase sea correcta.
 
 ---
 
 **Ejercicio 2: Código de Solución ✅**
+
 ```python
 # Codificación
 nombre = input("¿Cuál es tu nombre? ")
@@ -394,9 +406,10 @@ Esto es un **Entorno de Programación**. 🖥️
 ---
 
 **Componentes Clave:**
-*   **Editor de Texto:** Donde escribes tu código (como Word, pero para código).
-*   **Intérprete/Compilador:** Traduce tu código a lenguaje de máquina. (Python usa un intérprete).
-*   **Consola/Terminal:** Donde ves los resultados de tu programa.
+
+* **Editor de Texto:** Donde escribes tu código (como Word, pero para código).
+* **Intérprete/Compilador:** Traduce tu código a lenguaje de máquina. (Python usa un intérprete).
+* **Consola/Terminal:** Donde ves los resultados de tu programa.
 
 ---
 
@@ -407,9 +420,10 @@ Son programas que **combinan** todo lo anterior en uno solo.
 ---
 
 **Ejemplos de IDEs para Python:**
-*   **VS Code (Visual Studio Code):** Popular, flexible, muchas extensiones.
-*   **PyCharm:** Muy potente para desarrollo profesional.
-*   **Jupyter Notebooks:** Ideal para análisis de datos y aprendizaje interactivo.
+
+* **VS Code (Visual Studio Code):** Popular, flexible, muchas extensiones.
+* **PyCharm:** Muy potente para desarrollo profesional.
+* **Jupyter Notebooks:** Ideal para análisis de datos y aprendizaje interactivo.
 
 ---
 
@@ -425,25 +439,28 @@ Una sola orden que le das a la computadora. 🗣️
 
 **Tipos de Instrucciones Comunes:**
 
-1.  **Declaraciones**
-2.  **Asignaciones**
-3.  **Control de Flujo**
-4.  **Entrada y Salida (I/O)**
+1. **Declaraciones**
+2. **Asignaciones**
+3. **Control de Flujo**
+4. **Entrada y Salida (I/O)**
 
 ---
 
 **Tipo 1: Declaraciones (Variables) 🏷️**
-*   Sirven para **nombrar "contenedores"** donde guardamos información.
-*   Piensa en una etiqueta para una caja.
-*   `nombre_caja = valor_dentro`
+
+* Sirven para **nombrar "contenedores"** donde guardamos información.
+* Piensa en una etiqueta para una caja.
+* `nombre_caja = valor_dentro`
 
 ---
 
 **Ejemplo de Declaración**
+
 ```python
 saludo = "Hola"  # Declara 'saludo' y guarda el texto "Hola"
 edad = 30        # Declara 'edad' y guarda el número 30
 ```
+
 **`saludo` y `edad` son variables.**
 
 ---
@@ -457,16 +474,19 @@ int x;  // declaración de una variable entera llamada x, sin valor asignado aú
 ---
 
 **Tipo 2: Asignaciones ➡️**
-*   **Dar un valor** a una variable.
-*   Se usa el signo `=` (no significa "igual", sino "asigna").
+
+* **Dar un valor** a una variable.
+* Se usa el signo `=` (no significa "igual", sino "asigna").
 
 ---
 
 **Ejemplo de Asignación**
+
 ```python
 x = 10      # Asigna el valor 10 a la variable x
 x = x + 5   # Asigna el valor de (x actual + 5) a x (ahora x es 15)
 ```
+
 ¡Las variables pueden cambiar su valor!
 
 * OJO 👀: La primera vez que se asigna un valor a una variable, se está declarando.
@@ -474,18 +494,21 @@ x = x + 5   # Asigna el valor de (x actual + 5) a x (ahora x es 15)
 ---
 
 **Tipo 3: Control de Flujo 🚦**
-*   Cambian el **orden normal** en que se ejecutan las instrucciones (de arriba a abajo).
-*   Permiten tomar **decisiones** o **repetir** acciones.
+
+* Cambian el **orden normal** en que se ejecutan las instrucciones (de arriba a abajo).
+* Permiten tomar **decisiones** o **repetir** acciones.
 
 ---
 
 **Control de Flujo: Condicionales (Decisiones) 🤔**
-*   **`if` (si):** Ejecuta un bloque de código **si** una condición es verdadera.
-*   **`else` (si no):** Ejecuta otro bloque **si no** lo es.
+
+* **`if` (si):** Ejecuta un bloque de código **si** una condición es verdadera.
+* **`else` (si no):** Ejecuta otro bloque **si no** lo es.
 
 ---
 
 **Ejemplo: Condicional `if-else`**
+
 ```python
 temperatura = 25
 if temperatura > 20:
@@ -493,21 +516,25 @@ if temperatura > 20:
 else:
     print("Clima agradable.")
 ```
+
 **El programa decide qué mensaje mostrar.**
 
 ---
 
 **Control de Flujo: Bucles (Repeticiones) 🔁**
-*   **`for`:** Repite un bloque de código un **número fijo de veces** o para cada elemento en una secuencia.
-*   **`while`:** Repite un bloque de código **mientras** una condición sea verdadera.
+
+* **`for`:** Repite un bloque de código un **número fijo de veces** o para cada elemento en una secuencia.
+* **`while`:** Repite un bloque de código **mientras** una condición sea verdadera.
 
 ---
 
 **Ejemplo: Bucle `for`**
+
 ```python
 for numero in range(3): # Repite 3 veces (0, 1, 2)
     print("Contando:", numero)
 ```
+
 **Salida:**
 Contando: 0
 Contando: 1
@@ -516,21 +543,24 @@ Contando: 2
 ---
 
 **Tipo 4: Entrada y Salida (I/O) ↔️**
-*   **Entrada (`input()`):** Recibir datos del usuario (desde el teclado).
-*   **Salida (`print()`):** Mostrar información al usuario (en la pantalla).
+
+* **Entrada (`input()`):** Recibir datos del usuario (desde el teclado).
+* **Salida (`print()`):** Mostrar información al usuario (en la pantalla).
 
 ---
 
 **Ejemplo: Entrada y Salida**
+
 ```python
 nombre = input("¿Cómo te llamas? ") # Entrada
 print("¡Hola, " + nombre + "!")     # Salida
 ```
+
 **Permite que tu programa interactúe.**
 
 ---
 
-## 🌟 ¡Felicidades!
+## 🌟 ¡Felicidades
 
 ---
 
