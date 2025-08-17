@@ -1,5 +1,5 @@
 ---
-marp: false
+marp: true
 theme: uncover
 backgroundImage: url("../resources/templates/2/Template_page-0018.jpg")
 style: |
@@ -148,16 +148,14 @@ Según la respuesta, se ejecutan acciones diferentes que convergen en el punto *
 
 ---
 
-## Ejemplo Adicional: Clasificación Par/Impar 🔢
+## Ejemplo Adicional: Verificación de Edad 🎂
 
 ---
 
-**Planteamiento del problema:** Determinar si un número dado es par o impar.
+Determinar si una persona es mayor de edad o menor de edad.
 
----
 
-**Descripción del proceso:**
-Se solicita un número como entrada, se evalúa su paridad mediante una condición, y se muestra el resultado correspondiente.
+**Descripción del proceso:** Se solicita la edad como entrada. Luego, se evalúa si el valor ingresado es mayor o igual a 18. Dependiendo del resultado, se muestra un mensaje indicando si la persona es mayor de edad o no.
 
 ---
 
@@ -170,14 +168,15 @@ Desarrolle un diagrama de flujo para resolver este problema matemático.
 
 ---
 
-**Especificaciones:**
 Diseñe un diagrama de flujo para calcular el área de un rectángulo.
 
 **Elementos requeridos:**
 
 * Solicitar el **ancho** y el **alto** como datos de entrada.
 * Aplicar la fórmula: **Área = Ancho × Alto**.
-* Mostrar el **resultado** obtenido.
+* Si el área es **mayor a 30** hay que mostrar el mensaje "¡Comprar materiales!"
+* Si el área es **mayor a 20** pero **menor o igual que 30** hay que mostrar el mensaje "Tenemos materiales"
+* Si el área es **menor o igual que 20** hay que mostrar el resultado obtenido nada más.
 
 ---
 
@@ -187,7 +186,7 @@ Diseñe un diagrama de flujo para calcular el área de un rectángulo.
 
 **Propuesta de solución:**
 
-![Flujo](imgs/rectangulo.svg)
+![height:600px Flujo](imgs/solution.png)
 
 ---
 
