@@ -211,3 +211,6 @@ __marimo__/
 
 *.pdf
 .DS_Store
+pyproject.toml
+.gitignore
+uv.lock
