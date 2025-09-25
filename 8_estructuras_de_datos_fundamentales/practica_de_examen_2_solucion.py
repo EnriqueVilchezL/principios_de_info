@@ -1,15 +1,3 @@
-"""
-Soluciones para Práctica de Examen: Estructuras de Datos Fundamentales
-====================================================================
-
-Este archivo contiene las implementaciones de todos los ejercicios
-con sus respectivas pruebas de verificación.
-
-Autor: Solución para práctica de examen
-Fecha: Septiembre 2025
-"""
-
-
 # =============================================================================
 # EJERCICIO 1: MULTIPLICACIÓN DE MATRICES
 # =============================================================================
