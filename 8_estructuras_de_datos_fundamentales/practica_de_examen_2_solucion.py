@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Soluciones para Práctica de Examen: Estructuras de Datos Fundamentales
 ====================================================================
@@ -10,14 +9,12 @@ Autor: Solución para práctica de examen
 Fecha: Septiembre 2025
 """
 
-from typing import List, Dict, Any
-
 
 # =============================================================================
 # EJERCICIO 1: MULTIPLICACIÓN DE MATRICES
 # =============================================================================
 
-def multiplicar_matrices(A: List[List[float]], B: List[List[float]]) -> List[List[float]]:
+def multiplicar_matrices(A: list[list[float]], B: list[list[float]]) -> list[list[float]]:
     """
     Multiplica dos matrices A y B.
     
@@ -70,7 +67,7 @@ def multiplicar_matrices(A: List[List[float]], B: List[List[float]]) -> List[Lis
 # EJERCICIO 2: PRODUCTO PUNTO DE VECTORES
 # =============================================================================
 
-def producto_punto(v: List[float], u: List[float]) -> float:
+def producto_punto(v: list[float], u: list[float]) -> float:
     """
     Calcula el producto punto de dos vectores.
     
@@ -101,7 +98,7 @@ def producto_punto(v: List[float], u: List[float]) -> float:
 # EJERCICIO 3: PRODUCTO HADAMARD DE MATRICES
 # =============================================================================
 
-def producto_hadamard(A: List[List[float]], B: List[List[float]]) -> List[List[float]]:
+def producto_hadamard(A: list[list[float]], B: list[list[float]]) -> list[list[float]]:
     """
     Calcula el producto Hadamard (elemento por elemento) de dos matrices.
     
@@ -152,8 +149,8 @@ def producto_hadamard(A: List[List[float]], B: List[List[float]]) -> List[List[f
 # =============================================================================
 # EJERCICIO 4: CÁLCULO DE FRECUENCIAS
 # =============================================================================
-
-def calcular_frecuencias(elements: List[Any]) -> Dict[Any, int]:
+# 
+def calcular_frecuencias(elements: list) -> dict:
     """
     Calcula las frecuencias de aparición de cada elemento en una lista.
     
@@ -178,7 +175,7 @@ def calcular_frecuencias(elements: List[Any]) -> Dict[Any, int]:
 # EJERCICIO 5: PROMEDIO DE LECTURAS DE SENSOR
 # =============================================================================
 
-def promedio_por_hora(lecturas: List[Dict[str, Any]]) -> Dict[str, float]:
+def promedio_por_hora(lecturas: list[dict]) -> dict[str, float]:
     """
     Calcula el promedio de humedad por hora.
     
@@ -212,7 +209,7 @@ def promedio_por_hora(lecturas: List[Dict[str, Any]]) -> Dict[str, float]:
     return promedios
 
 
-def promedio_por_dia(lecturas: List[Dict[str, Any]]) -> Dict[str, float]:
+def promedio_por_dia(lecturas: list[dict[str, any]]) -> dict[str, float]:
     """
     Calcula el promedio de humedad por día.
     
@@ -252,215 +249,111 @@ def promedio_por_dia(lecturas: List[Dict[str, Any]]) -> Dict[str, float]:
 
 def verificar_ejercicio_1():
     """Verifica todos los ejemplos del ejercicio 1."""
-    print("="*60)
-    print("VERIFICACIÓN EJERCICIO 1: MULTIPLICACIÓN DE MATRICES")
-    print("="*60)
-    
     # Ejemplo 1: Multiplicación válida
-    print("\n--- Ejemplo 1: Multiplicación válida ---")
-    A = [[1, 2],
-         [3, 4]]
-    B = [[5, 6],
-         [7, 8]]
-    
+    A = [[1, 2], [3, 4]]
+    B = [[5, 6], [7, 8]]
     resultado = multiplicar_matrices(A, B)
-    esperado = [[19, 22], [43, 50]]
-    
-    print(f"A = {A}")
-    print(f"B = {B}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    esperado = [[19.0, 22.0], [43.0, 50.0]]
+    assert resultado == esperado, f"Ejemplo 1 falló: {resultado} != {esperado}"
     
     # Ejemplo 2: Multiplicación no válida
-    print("\n--- Ejemplo 2: Multiplicación no válida ---")
     A = [[1, 2, 3]]      # 1×3
     B = [[4, 5]]         # 1×2
-    
     try:
         resultado = multiplicar_matrices(A, B)
-        print("❌ Error: Debería haber lanzado excepción")
-    except ValueError as e:
-        print(f"✓ Excepción correcta: {e}")
+        assert False, "Ejemplo 2: Debería haber lanzado excepción"
+    except ValueError:
+        pass  # Comportamiento esperado
     
     # Ejemplo 3: Multiplicación rectangular
-    print("\n--- Ejemplo 3: Multiplicación rectangular ---")
-    A = [[1, 2, 3],
-         [4, 5, 6]]      # 2×3
-    B = [[7, 8],
-         [9, 10],
-         [11, 12]]       # 3×2
-    
+    A = [[1, 2, 3], [4, 5, 6]]      # 2×3
+    B = [[7, 8], [9, 10], [11, 12]]  # 3×2
     resultado = multiplicar_matrices(A, B)
-    esperado = [[58, 64], [139, 154]]
-    
-    print(f"A = {A}")
-    print(f"B = {B}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    esperado = [[58.0, 64.0], [139.0, 154.0]]
+    assert resultado == esperado, f"Ejemplo 3 falló: {resultado} != {esperado}"
 
 
 def verificar_ejercicio_2():
     """Verifica todos los ejemplos del ejercicio 2."""
-    print("\n\n" + "="*60)
-    print("VERIFICACIÓN EJERCICIO 2: PRODUCTO PUNTO DE VECTORES")
-    print("="*60)
-    
     # Ejemplo 1: Producto punto válido
-    print("\n--- Ejemplo 1: Producto punto válido ---")
     v = [1, 2, 3]
     u = [4, 5, 6]
-    
     resultado = producto_punto(v, u)
     esperado = 32.0
-    
-    print(f"v = {v}")
-    print(f"u = {u}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 1 falló: {resultado} != {esperado}"
     
     # Ejemplo 2: Vectores de diferente longitud
-    print("\n--- Ejemplo 2: Vectores de diferente longitud ---")
     v = [1, 2, 3]
     u = [4, 5]
-    
     try:
         resultado = producto_punto(v, u)
-        print("❌ Error: Debería haber lanzado excepción")
-    except ValueError as e:
-        print(f"✓ Excepción correcta: {e}")
+        assert False, "Ejemplo 2: Debería haber lanzado excepción"
+    except ValueError:
+        pass  # Comportamiento esperado
     
     # Ejemplo 3: Vectores con decimales
-    print("\n--- Ejemplo 3: Vectores con decimales ---")
     v = [1.5, 2.5, 3.5]
     u = [2.0, 3.0, 4.0]
-    
     resultado = producto_punto(v, u)
     esperado = 24.5
-    
-    print(f"v = {v}")
-    print(f"u = {u}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 3 falló: {resultado} != {esperado}"
 
 
 def verificar_ejercicio_3():
     """Verifica todos los ejemplos del ejercicio 3."""
-    print("\n\n" + "="*60)
-    print("VERIFICACIÓN EJERCICIO 3: PRODUCTO HADAMARD DE MATRICES")
-    print("="*60)
-    
     # Ejemplo 1: Producto Hadamard válido
-    print("\n--- Ejemplo 1: Producto Hadamard válido ---")
-    A = [[1, 2],
-         [3, 4]]
-    B = [[5, 6],
-         [7, 8]]
-    
+    A = [[1, 2], [3, 4]]
+    B = [[5, 6], [7, 8]]
     resultado = producto_hadamard(A, B)
     esperado = [[5, 12], [21, 32]]
-    
-    print(f"A = {A}")
-    print(f"B = {B}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 1 falló: {resultado} != {esperado}"
     
     # Ejemplo 2: Matrices de diferentes dimensiones
-    print("\n--- Ejemplo 2: Matrices de diferentes dimensiones ---")
     A = [[1, 2, 3]]      # 1×3
-    B = [[4, 5],
-         [6, 7]]         # 2×2
-    
+    B = [[4, 5], [6, 7]] # 2×2
     try:
         resultado = producto_hadamard(A, B)
-        print("❌ Error: Debería haber lanzado excepción")
-    except ValueError as e:
-        print(f"✓ Excepción correcta: {e}")
+        assert False, "Ejemplo 2: Debería haber lanzado excepción"
+    except ValueError:
+        pass  # Comportamiento esperado
     
     # Ejemplo 3: Matrices 3×3
-    print("\n--- Ejemplo 3: Matrices 3×3 ---")
-    A = [[1, 2, 3],
-         [4, 5, 6],
-         [7, 8, 9]]
-    B = [[2, 2, 2],
-         [3, 3, 3],
-         [4, 4, 4]]
-    
+    A = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    B = [[2, 2, 2], [3, 3, 3], [4, 4, 4]]
     resultado = producto_hadamard(A, B)
     esperado = [[2, 4, 6], [12, 15, 18], [28, 32, 36]]
-    
-    print(f"A = {A}")
-    print(f"B = {B}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 3 falló: {resultado} != {esperado}"
 
 
 def verificar_ejercicio_4():
     """Verifica todos los ejemplos del ejercicio 4."""
-    print("\n\n" + "="*60)
-    print("VERIFICACIÓN EJERCICIO 4: CÁLCULO DE FRECUENCIAS")
-    print("="*60)
-    
     # Ejemplo 1: Lista de números
-    print("\n--- Ejemplo 1: Lista de números ---")
     elementos = [1, 2, 3, 2, 1, 3, 3, 1]
-    
     resultado = calcular_frecuencias(elementos)
     esperado = {1: 3, 2: 2, 3: 3}
-    
-    print(f"Elementos: {elementos}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 1 falló: {resultado} != {esperado}"
     
     # Ejemplo 2: Lista de strings
-    print("\n--- Ejemplo 2: Lista de strings ---")
     elementos = ["manzana", "banana", "manzana", "naranja", "banana", "manzana"]
-    
     resultado = calcular_frecuencias(elementos)
     esperado = {"manzana": 3, "banana": 2, "naranja": 1}
-    
-    print(f"Elementos: {elementos}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 2 falló: {resultado} != {esperado}"
     
     # Ejemplo 3: Lista mixta
-    print("\n--- Ejemplo 3: Lista mixta ---")
     elementos = [1, "a", 1, "b", "a", 2.5, 2.5]
-    
     resultado = calcular_frecuencias(elementos)
     esperado = {1: 2, "a": 2, "b": 1, 2.5: 2}
-    
-    print(f"Elementos: {elementos}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 3 falló: {resultado} != {esperado}"
     
     # Ejemplo 4: Lista vacía
-    print("\n--- Ejemplo 4: Lista vacía ---")
     elementos = []
-    
     resultado = calcular_frecuencias(elementos)
     esperado = {}
-    
-    print(f"Elementos: {elementos}")
-    print(f"Resultado: {resultado}")
-    print(f"Esperado:  {esperado}")
-    print(f"✓ Correcto: {resultado == esperado}")
+    assert resultado == esperado, f"Ejemplo 4 falló: {resultado} != {esperado}"
 
 
 def verificar_ejercicio_5():
     """Verifica todos los ejemplos del ejercicio 5."""
-    print("\n\n" + "="*60)
-    print("VERIFICACIÓN EJERCICIO 5: PROMEDIO DE LECTURAS DE SENSOR")
-    print("="*60)
-    
     # Datos de entrada
     lecturas = [
         {"fecha": "15/09/2025", "hora": "08:30", "humedad": 65.5},
@@ -472,41 +365,23 @@ def verificar_ejercicio_5():
         {"fecha": "16/09/2025", "hora": "10:00", "humedad": 62.5}
     ]
     
-    print(f"\nDatos de entrada: {len(lecturas)} lecturas")
-    for lectura in lecturas:
-        print(f"  {lectura}")
-    
     # Función 1: promedio_por_hora
-    print("\n--- Función 1: promedio_por_hora ---")
     resultado_hora = promedio_por_hora(lecturas)
     esperado_hora = {"08": 67.67, "09": 65.53, "10": 62.5}
-    
-    print(f"Resultado: {resultado_hora}")
-    print(f"Esperado:  {esperado_hora}")
-    print(f"✓ Correcto: {resultado_hora == esperado_hora}")
+    assert resultado_hora == esperado_hora, f"Promedio por hora falló: {resultado_hora} != {esperado_hora}"
     
     # Función 2: promedio_por_dia
-    print("\n--- Función 2: promedio_por_dia ---")
     resultado_dia = promedio_por_dia(lecturas)
     esperado_dia = {"15/09/2025": 65.15, "16/09/2025": 67.17}
-    
-    print(f"Resultado: {resultado_dia}")
-    print(f"Esperado:  {esperado_dia}")
-    print(f"✓ Correcto: {resultado_dia == esperado_dia}")
+    assert resultado_dia == esperado_dia, f"Promedio por día falló: {resultado_dia} != {esperado_dia}"
     
     # Caso especial: Lista vacía
-    print("\n--- Caso especial: Lista vacía ---")
     lecturas_vacias = []
-    
     resultado_hora_vacia = promedio_por_hora(lecturas_vacias)
     resultado_dia_vacia = promedio_por_dia(lecturas_vacias)
     esperado_vacio = {}
-    
-    print(f"Resultado hora vacía: {resultado_hora_vacia}")
-    print(f"Resultado día vacía:  {resultado_dia_vacia}")
-    print(f"Esperado:  {esperado_vacio}")
-    print(f"✓ Correcto hora: {resultado_hora_vacia == esperado_vacio}")
-    print(f"✓ Correcto día:  {resultado_dia_vacia == esperado_vacio}")
+    assert resultado_hora_vacia == esperado_vacio, f"Hora vacía falló: {resultado_hora_vacia} != {esperado_vacio}"
+    assert resultado_dia_vacia == esperado_vacio, f"Día vacía falló: {resultado_dia_vacia} != {esperado_vacio}"
 
 
 # =============================================================================
@@ -515,25 +390,34 @@ def verificar_ejercicio_5():
 
 def main():
     """Ejecuta todas las verificaciones."""
-    print("VERIFICACIÓN COMPLETA DE EJERCICIOS")
-    print("Estructuras de Datos Fundamentales")
-    print("Fecha:", "21/09/2025")
+    print("Running verification tests...")
     
     try:
         verificar_ejercicio_1()
+        print("✓ Ejercicio 1: Multiplicación de matrices - PASSED")
+        
         verificar_ejercicio_2()
+        print("✓ Ejercicio 2: Producto punto de vectores - PASSED")
+        
         verificar_ejercicio_3()
+        print("✓ Ejercicio 3: Producto Hadamard - PASSED")
+        
         verificar_ejercicio_4()
+        print("✓ Ejercicio 4: Cálculo de frecuencias - PASSED")
+        
         verificar_ejercicio_5()
+        print("✓ Ejercicio 5: Promedio de lecturas de sensor - PASSED")
         
-        print("\n\n" + "="*60)
-        print("🎉 TODAS LAS VERIFICACIONES COMPLETADAS EXITOSAMENTE")
-        print("="*60)
+        print("\n🎉 ALL TESTS PASSED SUCCESSFULLY!")
         
+    except AssertionError as e:
+        print(f"\n❌ TEST FAILED: {e}")
+        raise
     except Exception as e:
-        print(f"\n❌ Error durante la verificación: {e}")
+        print(f"\n❌ UNEXPECTED ERROR: {e}")
         import traceback
         traceback.print_exc()
+        raise
 
 
 if __name__ == "__main__":
