@@ -3,9 +3,7 @@
 # =============================================================================
 
 
-def multiplicar_matrices(
-    A: list[list[float]], B: list[list[float]]
-) -> list[list[float]]:
+def multiplicar_matrices(A: list[list[float]], B: list[list[float]]) -> list[list[float]]:
     """
     Multiplica dos matrices A y B.
 
@@ -28,9 +26,7 @@ def multiplicar_matrices(
     columnas_B = len(B[0])
 
     if columnas_A != filas_B:
-        raise ValueError(
-            f"Las matrices no pueden multiplicarse ({columnas_A} ≠ {filas_B})"
-        )
+        raise ValueError(f"Las matrices no pueden multiplicarse ({columnas_A} ≠ {filas_B})")
 
     for fila in A:
         if len(fila) != columnas_A:
