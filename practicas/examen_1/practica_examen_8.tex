@@ -1,0 +1,489 @@
+\documentclass[11pt,a4paper]{article}
+
+% Paquetes básicos
+\usepackage[spanish]{babel}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fontspec}
+
+% Soporte para emojis con LuaLaTeX
+\usepackage{emoji}
+
+% Configuración de código Python
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=8pt,
+    breaklines=true,
+    frame=single,
+    backgroundcolor=\color{gray!10},
+    tabsize=4,
+    xleftmargin=2em,
+    framexleftmargin=1.5em
+}
+
+\lstset{style=pythonstyle}
+
+\title{\textbf{Sistema de Alerta Temprana de Incendios (SATI)}}
+\author{Principios de Informática - Valor: 10\%}
+\date{\textbf{Tiempo Total para la Prueba:} 1 hora y 40 minutos}
+
+\begin{document}
+
+\maketitle
+
+\section*{Contexto del Problema}
+
+La \textbf{Comisión Nacional de Emergencias (CNE)} de Costa Rica está implementando un prototipo para su Sistema de Alerta Temprana de Incendios (SATI), enfocado en la protección de sus Parques Nacionales. Este sistema integra datos de focos de calor de diversas fuentes satelitales, como el \textbf{GOES-16 de la NASA/NOAA} y el \textbf{Sentinel-2 de la ESA}. \emoji{satellite}
+
+Los datos satelitales llegan con información sobre el parque nacional donde se detectó cada foco de calor. Su tarea es consolidar estas detecciones, agruparlas por parque, calcular la intensidad promedio por parque, y determinar el nivel de riesgo basado en esta intensidad.
+
+\section*{Objetivo General}
+
+Desarrollar un programa en Python que procese detecciones satelitales de focos de calor. El programa deberá:
+
+\begin{enumerate}[leftmargin=*]
+    \item Consolidar todas las detecciones de múltiples satélites
+    \item Agrupar las detecciones por parque nacional
+    \item Calcular la potencia promedio de cada parque
+    \item Determinar el nivel de riesgo según la intensidad promedio
+    \item Generar un reporte formateado en la consola
+\end{enumerate}
+
+\section{Modelo de Datos}
+
+\subsection{Datos de Entrada: Focos de Calor por Satélite}
+
+Recibirá los datos en un \textbf{diccionario}. Las claves son los nombres de los satélites y los valores son \textbf{listas de diccionarios}, donde cada diccionario es una detección individual.
+
+\begin{itemize}[leftmargin=*]
+    \item \texttt{focos\_de\_calor\_brutos}: El diccionario principal de entrada.
+\end{itemize}
+
+\subsection{Formato del Diccionario de Detección (Individual)}
+
+\begin{itemize}[leftmargin=*]
+    \item \texttt{id\_deteccion}: Identificador único de la lectura.
+    \item \texttt{region\_geografica}: Nombre del Parque Nacional donde se detectó el foco.
+    \item \texttt{potencia\_mw}: Potencia Radiativa del Fuego (FRP) en Megawatts.
+    \item \texttt{timestamp}: Fecha y hora de la detección.
+\end{itemize}
+
+\subsection{Lista de Parques Nacionales Monitoreados}
+
+Se le proporciona una lista con los nombres de los parques nacionales bajo vigilancia:
+
+\begin{itemize}[leftmargin=*]
+    \item \texttt{parques\_monitoreados}: Lista con nombres de parques
+\end{itemize}
+
+\section{Requisitos del Procesamiento y Análisis}
+
+\subsection{Consolidación y Agrupación de Datos}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Consolidación:} Extraiga todas las detecciones individuales de la estructura de diccionario anidada (que tiene múltiples satélites como claves).
+    
+    \item \textbf{Agrupación por Parque:} Organice las detecciones agrupándolas por \texttt{region\_geografica}. Deberá crear una estructura que permita acceder fácilmente a todas las detecciones de cada parque.
+\end{enumerate}
+
+\subsection{Análisis de Peligrosidad por Parque}
+
+Con las detecciones agrupadas por parque:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Potencia Promedio:} Para cada parque que tenga al menos una detección, calcule la \textbf{potencia promedio} (promedio de \texttt{potencia\_mw} de todas sus detecciones).
+    
+    \item \textbf{Determinación del Nivel de Riesgo:} Clasifique cada parque según su potencia promedio:
+    \begin{itemize}
+        \item \textbf{ALTO}: potencia promedio $\geq$ 200 MW
+        \item \textbf{MEDIO}: potencia promedio entre 100 y 199 MW (inclusive)
+        \item \textbf{BAJO}: potencia promedio $<$ 100 MW
+    \end{itemize}
+    
+    \item \textbf{Parque de Máxima Prioridad:} Identificar el parque con la \textbf{potencia promedio más alta}. \emoji{fire}
+\end{enumerate}
+
+\newpage
+
+\section{Datos de Entrada de Ejemplo con Código Base}
+
+\begin{lstlisting}[language=Python]
+# --- Lista de parques nacionales monitoreados ---
+parques_monitoreados = [
+    'Parque Nacional Santa Rosa',
+    'Parque Nacional Corcovado',
+    'Parque Nacional Volcan Poas',
+    'Parque Nacional Tortuguero',
+]
+
+# --- Datos de Detecciones Satelitales ---
+focos_de_calor_brutos = {
+    'GOES-16': [
+        {'id_deteccion': 'G1-001', 'region_geografica': 'Parque Nacional Santa Rosa', 'potencia_mw': 200.0, 'timestamp': '2025-10-11T14:30:00Z'},
+        {'id_deteccion': 'G1-002', 'region_geografica': 'Parque Nacional Corcovado', 'potencia_mw': 180.0, 'timestamp': '2025-10-11T14:32:00Z'},
+        {'id_deteccion': 'G1-003', 'region_geografica': 'Parque Nacional Volcan Poas', 'potencia_mw': 50.0, 'timestamp': '2025-10-11T14:35:00Z'},
+        {'id_deteccion': 'G1-004', 'region_geografica': 'Parque Nacional Tortuguero', 'potencia_mw': 100.0, 'timestamp': '2025-10-11T14:42:00Z'},
+    ],
+    'Sentinel-2': [
+        {'id_deteccion': 'S2-001', 'region_geografica': 'Parque Nacional Tortuguero', 'potencia_mw': 120.0, 'timestamp': '2025-10-11T15:01:00Z'},
+        {'id_deteccion': 'S2-002', 'region_geografica': 'Parque Nacional Tortuguero', 'potencia_mw': 150.0, 'timestamp': '2025-10-11T15:04:00Z'},
+        {'id_deteccion': 'S2-003', 'region_geografica': 'Parque Nacional Corcovado', 'potencia_mw': 300.0, 'timestamp': '2025-10-11T15:10:00Z'},
+    ]
+}
+
+# Puede usar esta funcion para imprimir el reporte final si lo desea
+def imprimir_reporte(
+    resumen_parques: dict,
+    parque_maxima_prioridad: str
+) -> None:
+    """Imprimir el reporte formateado en consola.
+    
+    Args:
+        resumen_parques (dict): Informacion de cada parque con detecciones.
+            Las claves son nombres de parques.
+            Los valores son diccionarios con:
+            - 'num_detecciones' (int): Cantidad de detecciones asignadas
+            - 'potencia_promedio' (float): Potencia promedio en MW
+            - 'nivel_riesgo' (str): 'ALTO', 'MEDIO' o 'BAJO'
+            
+            Ejemplo:
+            {
+                'Parque Nacional Corcovado': {
+                    'num_detecciones': 2,
+                    'potencia_promedio': 240.0,
+                    'nivel_riesgo': 'ALTO'
+                },
+                ...
+            }
+        
+        parque_maxima_prioridad (str): Nombre del parque con mayor potencia promedio.
+    
+    Returns:
+        None
+    """
+    print("=" * 67)
+    print("*** SATI: REPORTE DE ANALISIS DE FOCOS DE CALOR ***")
+    print("=" * 67)
+    print("Fecha del Reporte: 2025-10-11")
+    
+    # Parque de maxima prioridad
+    print("\n--- PARQUE DE MAXIMA PRIORIDAD ---")
+    
+    if parque_maxima_prioridad and parque_maxima_prioridad in resumen_parques:
+        info = resumen_parques[parque_maxima_prioridad]
+        print(f"\n> {parque_maxima_prioridad}")
+        print(f"  - Potencia Promedio: {info['potencia_promedio']:.2f} MW")
+        print(f"  - Nivel de Riesgo: {info['nivel_riesgo']}")
+        print(f"  - Detecciones Asignadas: {info['num_detecciones']}")
+    else:
+        print("  - No hay detecciones")
+    
+    # Resumen por parque
+    print("\n--- RESUMEN POR PARQUE NACIONAL ---")
+    
+    for nombre_parque in sorted(resumen_parques.keys()):
+        info = resumen_parques[nombre_parque]
+        print(f"\n> {nombre_parque}:")
+        print(f"  - Detecciones: {info['num_detecciones']}")
+        print(f"  - Potencia Promedio: {info['potencia_promedio']:.2f} MW")
+        print(f"  - Nivel de Riesgo: {info['nivel_riesgo']}")
+    
+    print("\n" + "=" * 67)
+    print("*** Fin del Reporte ***")
+    print("=" * 67)
+
+
+# ===================================================================
+# FUNCION PRINCIPAL
+# ===================================================================
+
+def ejecutar_solucion() -> None:
+    """Ejecutar el flujo completo del sistema SATI."""
+    # La idea es que aqui utilice los datos almacenados en las variables
+    # **focos_de_calor_brutos** y **parques_monitoreados**
+    # para realizar todo el procesamiento y analisis requerido.
+    pass
+
+# ===================================================================
+# PUNTO DE ENTRADA
+# ===================================================================
+
+if __name__ == "__main__":
+    ejecutar_solucion()
+\end{lstlisting}
+
+\newpage
+
+\section{Salida Esperada en Consola}
+
+\begin{lstlisting}[language={},numbers=none,frame=single,basicstyle=\ttfamily\footnotesize]
+===================================================================
+*** SATI: REPORTE DE ANÁLISIS DE FOCOS DE CALOR ***
+===================================================================
+Fecha del Reporte: 2025-10-11
+
+--- PARQUE DE MÁXIMA PRIORIDAD ---
+
+> Parque Nacional Corcovado
+  - Potencia Promedio: 240.00 MW
+  - Nivel de Riesgo: ALTO
+  - Detecciones Asignadas: 2
+
+--- RESUMEN POR PARQUE NACIONAL ---
+
+> Parque Nacional Corcovado:
+  - Detecciones: 2
+  - Potencia Promedio: 240.00 MW
+  - Nivel de Riesgo: ALTO
+
+> Parque Nacional Santa Rosa:
+  - Detecciones: 1
+  - Potencia Promedio: 200.00 MW
+  - Nivel de Riesgo: ALTO
+
+> Parque Nacional Tortuguero:
+  - Detecciones: 3
+  - Potencia Promedio: 123.33 MW
+  - Nivel de Riesgo: MEDIO
+
+> Parque Nacional Volcán Poás:
+  - Detecciones: 1
+  - Potencia Promedio: 50.00 MW
+  - Nivel de Riesgo: BAJO
+
+===================================================================
+*** Fin del Reporte ***
+===================================================================
+\end{lstlisting}
+
+\newpage
+
+\section{Hoja de Referencia Rápida}
+
+Esta guía contiene patrones de Python útiles para resolver problemas de procesamiento de datos.
+
+\subsection{Iterar sobre Diccionarios}
+
+\begin{lstlisting}[language=Python]
+mi_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Iterar sobre claves y valores
+for clave, valor in mi_dict.items():
+    print(f"Clave: {clave}, Valor: {valor}")
+\end{lstlisting}
+
+\subsection{Trabajar con Diccionarios Anidados}
+
+\begin{lstlisting}[language=Python]
+# Diccionario que contiene listas de diccionarios
+datos = {
+    'grupo_A': [{'id': 1, 'valor': 100}, {'id': 2, 'valor': 150}],
+    'grupo_B': [{'id': 3, 'valor': 200}]
+}
+
+# Iterar con bucles anidados
+for nombre_grupo, lista_items in datos.items():
+    for item in lista_items:
+        print(f"{nombre_grupo}: ID {item['id']}, Valor {item['valor']}")
+\end{lstlisting}
+
+\subsection{3. Crear y Usar Diccionarios como Acumuladores}
+
+\begin{lstlisting}[language=Python]
+# Verificar si una clave existe
+if 'clave' in mi_dict:
+    print("La clave existe")
+
+# Acceder con valor por defecto
+valor = mi_dict.get('clave_inexistente', 0)  # Retorna 0 si no existe
+
+# Crear listas vacias como valores
+agrupados = {}
+if 'categoria' not in agrupados:
+    agrupados['categoria'] = []
+agrupados['categoria'].append(item)
+\end{lstlisting}
+
+\subsection{Encontrar el Máximo}
+
+\begin{lstlisting}[language=Python]
+# Encontrar el maximo en una lista de numeros
+numeros = [10, 50, 30, 25]
+maximo = float('-inf')  # Valor inicial muy pequeno
+
+for num in numeros:
+    if num > maximo:
+        maximo = num
+
+print(f"El maximo es: {maximo}")
+\end{lstlisting}
+
+\subsection{Calcular Promedios}
+
+\begin{lstlisting}[language=Python]
+# Calcular el promedio de una lista
+valores = [100, 150, 200]
+suma = 0
+
+for valor in valores:
+    suma += valor
+
+promedio = suma / len(valores)
+print(f"Promedio: {promedio:.2f}")
+\end{lstlisting}
+
+\subsection{Formato de Números con f-strings}
+
+\begin{lstlisting}[language=Python]
+numero = 123.456789
+print(f"Con 2 decimales: {numero:.2f}")  # Salida: 123.46
+\end{lstlisting}
+
+\newpage
+
+\section{Guía de Formato para Evaluaciones de Programación en Papel}
+
+Para asegurar que su solución sea clara, legible y pueda ser evaluada de manera justa y consistente, es \textbf{obligatorio} seguir las siguientes directrices al escribir su código.
+
+\subsection{Reglas Generales de Presentación}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Escritura Clara:} Utilice un bolígrafo de tinta oscura (negro o azul) o lápiz y escriba con letra de imprenta clara. La legibilidad es un requisito para la evaluación.
+    \item \textbf{Planificación del Espacio:} Planifique su solución antes de escribir para asegurar que quepa en el espacio que tenga.
+    \item \textbf{Correcciones Limpias:} Si necesita corregir, tache la sección incorrecta con una \textbf{única línea horizontal} y escriba la corrección de forma clara. Evite tachones o el uso de corrector.
+\end{itemize}
+
+\subsection{Estructura Obligatoria del Código}
+
+Toda solución debe seguir la siguiente estructura de tres partes en el orden especificado. Se utilizarán comentarios para delimitar cada sección.
+
+\subsubsection{Parte I: Funciones Auxiliares (Helpers)}
+
+En esta sección se deben definir todas las funciones de apoyo. Estas son funciones pequeñas y reutilizables que realizan una tarea específica (ej: cálculos matemáticos, validaciones de datos, normalización de texto, etc.).
+
+\subsubsection{Parte II: Función Principal}
+
+Aquí se debe definir la función principal que orquesta la solución. Esta función se encargará de:
+
+\begin{enumerate}[leftmargin=*]
+    \item Inicializar las variables necesarias.
+    \item Llamar a las funciones auxiliares para procesar los datos.
+    \item Realizar los análisis y agregaciones principales.
+    \item Preparar los resultados finales.
+    \item Llamar a cualquier función de impresión proporcionada en el examen.
+\end{enumerate}
+
+\subsubsection{Parte III: Punto de Entrada (Bloque Principal)}
+
+Esta es la última parte de su script. Contendrá únicamente el bloque \texttt{if \_\_name\_\_ == "\_\_main\_\_":} que llama a su función principal para iniciar la ejecución.
+
+\subsubsection{Ejemplo de la Estructura Completa:}
+
+\begin{lstlisting}[language=Python]
+# ==========================================================
+# PARTE I: FUNCIONES AUXILIARES
+# ==========================================================
+
+def calcular_algo(param1: int, param2: float) -> float:
+    # Logica de la primera funcion auxiliar
+    resultado: float = param1 * param2
+    return resultado
+
+def validar_dato(dato: dict) -> bool:
+    # Logica de la segunda funcion auxiliar
+    return True # o False
+
+# (Definir todas las demas funciones auxiliares aqui)
+
+
+# ==========================================================
+# PARTE II: FUNCION PRINCIPAL
+# ==========================================================
+
+def ejecutar_solucion() -> None:
+    # 1. Usar los datos de entrada proporcionados
+    
+    # 2. Llamar a las funciones auxiliares
+    resultado_calculo: float = calcular_algo(10, 5.5)
+    es_valido: bool = validar_dato({'clave': 'valor'})
+
+    # 3. Procesar, analizar y agregar resultados
+
+    # 4. Preparar las estructuras de datos finales
+    resultados_finales: dict = {}
+    
+    # 5. Llamar a la funcion de impresion del examen
+    imprimir_reporte(resultados_finales)
+
+
+# ==========================================================
+# PARTE III: PUNTO DE ENTRADA
+# ==========================================================
+
+if __name__ == "__main__":
+    ejecutar_solucion()
+\end{lstlisting}
+
+\subsection{Formato y Estilo del Código}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Indentación Consistente:}
+    \begin{itemize}
+        \item La indentación es \textbf{obligatoria} y define los bloques de código.
+        \item Use una sangría visualmente clara y consistente para cada nivel (aprox. 4 espacios).
+    \end{itemize}
+    
+    \item \textbf{Espaciado Vertical:}
+    \begin{itemize}
+        \item Deje \textbf{una línea en blanco} entre la definición de cada función.
+    \end{itemize}
+    
+    \item \textbf{Nombres de Variables y Funciones:}
+    \begin{itemize}
+        \item Utilice nombres \textbf{descriptivos} y claros (e.g., \texttt{promedio\_final} en lugar de \texttt{pf}).
+        \item Los nombres de las funciones deben ser verbos que hacen explícito qué hace la función (e.g., \texttt{def calcular\_promedio()} en lugar de \texttt{def promedio()}).
+        \item Siga la convención \texttt{snake\_case} (minúsculas y guiones bajos).
+    \end{itemize}
+    
+    \item \textbf{Type Hints (Recomendado, no obligatorio):}
+    \begin{itemize}
+        \item Se recomienda el uso de \textit{type hints} para mejorar la claridad de su código. Ayudan a documentar el tipo de datos que una función espera como argumento (\texttt{param: tipo}) y el tipo de dato que retorna (\texttt{-> tipo}).
+        \item \textbf{Ejemplo:} \texttt{def calcular\_promedio(numeros: list[float]) -> float:}
+        \item Aunque es una buena práctica, \textbf{su uso no es un requisito obligatorio para la evaluación.}
+    \end{itemize}
+    
+    \item \textbf{Comentarios:}
+    \begin{itemize}
+        \item Añada comentarios breves \textbf{únicamente} para explicar lógica compleja. No comente lo obvio.
+    \end{itemize}
+    
+    \item \textbf{Uso de la Plantilla del Examen:}
+    \begin{itemize}
+        \item Asuma que los datos y funciones proporcionados en el enunciado ya existen. \textbf{No los reescriba}.
+        \item Su función principal debe generar las estructuras de datos con el formato exacto que esperan las funciones de reporte del examen.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+
+\section{Evaluación}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Correctitud (80\%):} La solución debe cumplir con todos los requisitos funcionales especificados en el enunciado. Se evaluará si el programa procesa correctamente los datos de entrada y produce la salida esperada.
+    
+    \item \textbf{Legibilidad, Estilo y Estructura Esperada (20\%):} Se evaluará la claridad del código, incluyendo la estructura, nombres de variables y funciones, uso adecuado de indentación y espaciado, comentarios cuando sean necesarios y uso de la plantilla y la guía de formato proporcionadas.
+\end{itemize}
+
+\textbf{Nota:} En este punto es fundamental que su código siga la sintaxis correcta de Python y demuestre un entendimiento básico de los conceptos vistos en clase. Caso contrario, no será evaluada. Esto puede ser por partes o para la totalidad de la solución.
+
+\end{document}
