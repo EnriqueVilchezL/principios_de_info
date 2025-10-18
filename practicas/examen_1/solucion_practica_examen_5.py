@@ -1,136 +1,152 @@
 """
-Solución Completa del Sistema de Análisis de Datos Meteorológicos del IMN
-
-Este archivo contiene la solución completa con comentarios detallados para
-estudiantes principiantes.
-
-Autor: Sistema de Monitoreo IMN
-Fecha: Octubre 2025
+POSIBLE Solución Completa del Sistema de Análisis de Datos Meteorológicos del IMN
 """
 
-import math
-
-
 # =============================================================================
-# DATOS DE REFERENCIA DE ESTACIONES (YA PROPORCIONADOS)
+# FUNCIÓN PRINCIPAL
 # =============================================================================
 
-# Información de cada estación: {código: (provincia, altitud_msnm)}
-info_estaciones_ejemplo = {
-    'EST-01-SJO': ('San José', 1172),
-    'EST-02-LIM': ('Limón', 3),
-    'EST-03-CRT': ('Cartago', 1435),
-    'EST-04-ALA': ('Alajuela', 952)
-}
+def main():
+    """Ejecuta el flujo completo del sistema de análisis meteorológico."""
 
+    # Información de cada estación: {código: (provincia, altitud_msnm)}
+    info_estaciones_ejemplo = {
+        'EST-01-SJO': ('San José', 1172),
+        'EST-02-LIM': ('Limón', 3),
+        'EST-03-CRT': ('Cartago', 1435),
+        'EST-04-ALA': ('Alajuela', 952)
+    }
 
-# =============================================================================
-# DATOS DE LECTURAS DE EJEMPLO (YA PROPORCIONADOS)
-# =============================================================================
-
-lecturas_brutas_ejemplo = [
-    {
-        'id_lectura': 'LEC-001',
-        'estacion': ' EST-01-SJO ',
-        'timestamp': '08:00',
-        'temperatura_celsius': 22.5,
-        'humedad_relativa': 80.5,
-        'precipitacion_mm': 0.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-    {
-        'id_lectura': 'LEC-002',
-        'estacion': 'EST-02-LIM',
-        'timestamp': '08:15',
-        'temperatura_celsius': 30.1,
-        'humedad_relativa': 88.0,
-        'precipitacion_mm': 5.5,
-        'estado_sensor': 'OPERATIVO'
-    },
-    # Temperatura no es un número, debe ser descartada
-    {
-        'id_lectura': 'LEC-003',
-        'estacion': 'EST-03-CRT',
-        'timestamp': '08:05',
-        'temperatura_celsius': 'diecinueve',
-        'humedad_relativa': 85.2,
-        'precipitacion_mm': 0.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-    # Humedad fuera de rango (mayor a 100), debe ser descartada
-    {
-        'id_lectura': 'LEC-004',
-        'estacion': 'EST-01-SJO',
-        'timestamp': '14:30',
-        'temperatura_celsius': 26.8,
-        'humedad_relativa': 102.0,
-        'precipitacion_mm': 15.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-    {
-        'id_lectura': 'LEC-005',
-        'estacion': 'EST-03-CRT',
-        'timestamp': '14:45',
-        'temperatura_celsius': 18.9,
-        'humedad_relativa': 90.0,
-        'precipitacion_mm': 2.5,
-        'estado_sensor': 'OPERATIVO'
-    },
-    # Estación no registrada, debe ser descartada
-    {
-        'id_lectura': 'LEC-006',
-        'estacion': 'EST-05-HER',
-        'timestamp': '15:00',
-        'temperatura_celsius': 24.0,
-        'humedad_relativa': 78.0,
-        'precipitacion_mm': 1.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-    {
-        'id_lectura': 'LEC-007',
-        'estacion': 'EST-02-LIM',
-        'timestamp': '15:10',
-        'temperatura_celsius': 31.5,
-        'humedad_relativa': 87.5,
-        'precipitacion_mm': 25.3,
-        'estado_sensor': 'OPERATIVO'
-    },
-    # Sensor con error, debe ser descartada
-    {
-        'id_lectura': 'LEC-008',
-        'estacion': 'EST-04-ALA',
-        'timestamp': '15:20',
-        'temperatura_celsius': 28.0,
-        'humedad_relativa': 70.1,
-        'precipitacion_mm': 0.0,
-        'estado_sensor': 'ERROR'
-    },
-    {
-        'id_lectura': 'LEC-009',
-        'estacion': 'EST-03-CRT',
-        'timestamp': '04:00',
-        'temperatura_celsius': 16.5,
-        'humedad_relativa': 92.3,
-        'precipitacion_mm': 0.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-    # Temperatura extrema (evento)
-    {
-        'id_lectura': 'LEC-010',
-        'estacion': 'EST-04-ALA',
-        'timestamp': '12:00',
-        'temperatura_celsius': 36.2,
-        'humedad_relativa': 65.0,
-        'precipitacion_mm': 0.0,
-        'estado_sensor': 'OPERATIVO'
-    },
-]
-
-
-# =============================================================================
-# FUNCIONES IMPLEMENTADAS CON COMENTARIOS EDUCATIVOS
-# =============================================================================
-
+    # DATOS DE LECTURAS DE EJEMPLO (YA PROPORCIONADOS)
+    lecturas_brutas_ejemplo = [
+        {
+            'id_lectura': 'LEC-001',
+            'estacion': ' EST-01-SJO ',
+            'timestamp': '08:00',
+            'temperatura_celsius': 22.5,
+            'humedad_relativa': 80.5,
+            'precipitacion_mm': 0.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+        {
+            'id_lectura': 'LEC-002',
+            'estacion': 'EST-02-LIM',
+            'timestamp': '08:15',
+            'temperatura_celsius': 30.1,
+            'humedad_relativa': 88.0,
+            'precipitacion_mm': 5.5,
+            'estado_sensor': 'OPERATIVO'
+        },
+        # Temperatura no es un número, debe ser descartada
+        {
+            'id_lectura': 'LEC-003',
+            'estacion': 'EST-03-CRT',
+            'timestamp': '08:05',
+            'temperatura_celsius': 'diecinueve',
+            'humedad_relativa': 85.2,
+            'precipitacion_mm': 0.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+        # Humedad fuera de rango (mayor a 100), debe ser descartada
+        {
+            'id_lectura': 'LEC-004',
+            'estacion': 'EST-01-SJO',
+            'timestamp': '14:30',
+            'temperatura_celsius': 26.8,
+            'humedad_relativa': 102.0,
+            'precipitacion_mm': 15.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+        {
+            'id_lectura': 'LEC-005',
+            'estacion': 'EST-03-CRT',
+            'timestamp': '14:45',
+            'temperatura_celsius': 18.9,
+            'humedad_relativa': 90.0,
+            'precipitacion_mm': 2.5,
+            'estado_sensor': 'OPERATIVO'
+        },
+        # Estación no registrada, debe ser descartada
+        {
+            'id_lectura': 'LEC-006',
+            'estacion': 'EST-05-HER',
+            'timestamp': '15:00',
+            'temperatura_celsius': 24.0,
+            'humedad_relativa': 78.0,
+            'precipitacion_mm': 1.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+        {
+            'id_lectura': 'LEC-007',
+            'estacion': 'EST-02-LIM',
+            'timestamp': '15:10',
+            'temperatura_celsius': 31.5,
+            'humedad_relativa': 87.5,
+            'precipitacion_mm': 25.3,
+            'estado_sensor': 'OPERATIVO'
+        },
+        # Sensor con error, debe ser descartada
+        {
+            'id_lectura': 'LEC-008',
+            'estacion': 'EST-04-ALA',
+            'timestamp': '15:20',
+            'temperatura_celsius': 28.0,
+            'humedad_relativa': 70.1,
+            'precipitacion_mm': 0.0,
+            'estado_sensor': 'ERROR'
+        },
+        {
+            'id_lectura': 'LEC-009',
+            'estacion': 'EST-03-CRT',
+            'timestamp': '04:00',
+            'temperatura_celsius': 16.5,
+            'humedad_relativa': 92.3,
+            'precipitacion_mm': 0.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+        # Temperatura extrema (evento)
+        {
+            'id_lectura': 'LEC-010',
+            'estacion': 'EST-04-ALA',
+            'timestamp': '12:00',
+            'temperatura_celsius': 36.2,
+            'humedad_relativa': 65.0,
+            'precipitacion_mm': 0.0,
+            'estado_sensor': 'OPERATIVO'
+        },
+    ]
+    
+    # Paso 1: Validar y limpiar datos
+    print("Procesando datos de estaciones meteorológicas...")
+    lecturas_validas = validar_y_limpiar_lecturas(
+        lecturas_brutas_ejemplo,
+        info_estaciones_ejemplo
+    )
+    print(f"{len(lecturas_validas)} lecturas válidas de {len(lecturas_brutas_ejemplo)} totales\n")
+    
+    # Paso 2: Calcular promedios por estación
+    promedios = calcular_promedios_por_estacion(lecturas_validas)
+    
+    # Paso 3: Identificar eventos extremos
+    eventos = identificar_eventos_extremos(lecturas_validas)
+    
+    # Paso 4: Resumir precipitación por provincia
+    precipitacion_provincial = resumir_precipitacion_por_provincia(
+        lecturas_validas,
+        info_estaciones_ejemplo
+    )
+    
+    # Paso 5: Encontrar lectura más fría de estación de interés
+    estacion_interes = 'EST-03-CRT'
+    lectura_mas_fria = encontrar_lectura_mas_fria(lecturas_validas, estacion_interes)
+    
+    # Paso 6: Imprimir reporte climático
+    imprimir_reporte_climatico(
+        promedios,
+        eventos,
+        precipitacion_provincial,
+        lectura_mas_fria
+    )
 
 def validar_y_limpiar_lecturas(
     lecturas_brutas: list[dict],
@@ -363,11 +379,13 @@ def encontrar_lectura_mas_fria(
     
     # --- PASO 3: ENCONTRAR LA MÁS FRÍA ---
     
-    # Usamos la función min() para encontrar el mínimo
-    # El parámetro "key" indica qué valor usar para comparar
-    # lambda es una función anónima que extrae la temperatura de cada lectura
-    lectura_mas_fria = min(lecturas_estacion, key=lambda x: x['temperatura_celsius'])
-    
+    lectura_mas_fria = None
+    temp_min = float('inf') # Se puede inicializar con el valor inf, que representa infinito
+    for lec in lecturas_estacion:
+        if lec['temperatura_celsius'] < temp_min:
+            temp_min = lec['temperatura_celsius']
+            lectura_mas_fria = lec
+
     # Retornamos el ID de la lectura más fría
     return lectura_mas_fria['id_lectura']
 
@@ -441,50 +459,9 @@ def imprimir_reporte_climatico(
     print("=" * 60)
 
 
-# =============================================================================
-# FUNCIÓN PRINCIPAL (YA IMPLEMENTADA COMO GUÍA)
-# =============================================================================
-
-
-def ejecutar_sistema():
-    """Ejecuta el flujo completo del sistema de análisis meteorológico."""
-    
-    # Paso 1: Validar y limpiar datos
-    print("🔍 Procesando datos de estaciones meteorológicas...")
-    lecturas_validas = validar_y_limpiar_lecturas(
-        lecturas_brutas_ejemplo,
-        info_estaciones_ejemplo
-    )
-    print(f"✅ {len(lecturas_validas)} lecturas válidas de {len(lecturas_brutas_ejemplo)} totales\n")
-    
-    # Paso 2: Calcular promedios por estación
-    promedios = calcular_promedios_por_estacion(lecturas_validas)
-    
-    # Paso 3: Identificar eventos extremos
-    eventos = identificar_eventos_extremos(lecturas_validas)
-    
-    # Paso 4: Resumir precipitación por provincia
-    precipitacion_provincial = resumir_precipitacion_por_provincia(
-        lecturas_validas,
-        info_estaciones_ejemplo
-    )
-    
-    # Paso 5: Encontrar lectura más fría de estación de interés
-    estacion_interes = 'EST-03-CRT'
-    lectura_mas_fria = encontrar_lectura_mas_fria(lecturas_validas, estacion_interes)
-    
-    # Paso 6: Imprimir reporte climático
-    imprimir_reporte_climatico(
-        promedios,
-        eventos,
-        precipitacion_provincial,
-        lectura_mas_fria
-    )
-
 
 # =============================================================================
 # PUNTO DE ENTRADA
 # =============================================================================
 
-if __name__ == "__main__":
-    ejecutar_sistema()
+main()
