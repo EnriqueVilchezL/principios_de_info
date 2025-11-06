@@ -211,3 +211,7 @@ __marimo__/
 
 *.pdf
 .DS_Store
+pyproject.toml
+uv.lock
+11_manipulacion_de_archivos/iris.csv
+11_manipulacion_de_archivos/manipulacion_de_archivos_con_soluciones.ipynb
