@@ -1,0 +1,11 @@
+Tipo_de_registro,ID_o_Transportista,Nombre_o_Carga,Distancia_o_Capacidad_o_Deposito_1,Deposito_3
+deposito,1,Taboga,50.5,
+deposito,2,Jicaral,35.0,
+deposito,3,El Roble,75.2,
+transpor,4,Acosta,400/0,
+transpor,17,Palmares,200/0,
+transpor,5,Perez,300/30,
+flete,4,30/15,1,2
+flete,17,10/0,3,0
+flete,5,50/0,1,3
+flete,4,40/20,2,0
